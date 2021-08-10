@@ -1,0 +1,68 @@
+﻿@model SachOnline.Models.KhachHang
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script language="javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+    <title>Đăng nhập</title>
+    <link href="~/Assets/js/Register.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <div id="form-register" style="left:520px; font-size:25px;">
+            @using (Html.BeginForm("Authen", "Login", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+            <table>
+                <tr>
+                    <th colspan="2" class="title-form">Đăng nhập</th>
+                </tr>
+                <tr>
+                    <td>Số điện thoại</td>
+                    <td>@Html.TextBoxFor(m => m.SDT)</td>
+                </tr>
+                <tr>
+                    <td colspan="2">@Html.ValidationMessageFor(m => m.SDT)</td>
+                </tr>
+                <tr>
+                    <td>Nhập mật khẩu</td>
+                    <td>@Html.PasswordFor(m => m.MatKhau)</td>
+                </tr>
+                <tr>
+                    <td colspan="2">@Html.ValidationMessageFor(m => m.MatKhau)</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        @if (ViewBag.Error != null)
+                        {
+                            <span class="field-validation-error">@ViewBag.Error</span>
+                        }
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <input type="submit" value="Đăng nhập" />
+                        <input type="reset" value="Loại bỏ" />
+
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" colspan="3"><a class="btn btn-primary" href="@Url.Action("Register","Login")">Đăng ký ngay</a></td>
+                </tr>
+                <tr>
+                    <td align="center" colspan="3"><a class="btn btn-primary" href="@Url.Action("Index","SanPhams")">Trang chủ</a></td>
+                </tr>
+            </table>
+            }
+        </div>
+    </div>
+</body>
+</html>

@@ -20,7 +20,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="~/Assets/css/style.css">
 
-   
+
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="~/Assets/font-awesome/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="~/Assets/fonts/font-slider.css" type="text/css">
@@ -56,9 +56,19 @@
                 </div>
                 <div class="col-xs-6">
                     <ul class="top-link">
-                        <li><a href="@Url.Action("Index","KhachHangs")"><span class="glyphicon glyphicon-user"></span>Tài khoản của tôi</a></li>
-                        <li><a href="contact.html"><span class="glyphicon glyphicon-envelope"></span> Liên hệ</a></li>
+                        <li><a href="@Url.Action("Register","Login")"><span class="glyphicon glyphicon-user"></span>Đăng ký</a></li>
+                        <li><a href="@Url.Action("Index","Login")"><span class="glyphicon glyphicon-user"></span>Đăng nhập</a></li>
+                        <li><a href="@Url.Action("Logout","Login")"><span></span>Đăng xuất</a></li>
+
                     </ul>
+                    @if (HttpContext.Current.Session["SDT"] == null)
+                    {
+
+                    }
+                    else
+                    {   <span>Bạn đã đăng nhập thành công!!!<br /></span>
+                        <span>Xin chào @Session["SDT"]</span>
+                    }
                 </div>
             </div>
         </div>
@@ -92,17 +102,14 @@
             </div>
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="index.html">Trang Chủ</a></li>
-                    <li class="dropdown">
-                        <a href="@Url.Action("Index","SanPhams")" class="dropdown-toggle" data-toggle="dropdown">Sản phẩm</a>
-                    </li>
+                    <li><a href="@Url.Action("Index","SanPhams")">Trang Chủ</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Danh mục sản phẩm</a>
                         @Html.Partial("_DanhMucSanPham", SachOnline.Buss.DanhMucSanPhamBus.DanhSach())
 
                     </li>
                     @Html.Partial("_NhaXuatBan", SachOnline.Buss.NhaXuatBanBus.DanhSach())
-   
+
                 </ul>
             </div>
         </div>

@@ -1,4 +1,4 @@
-namespace SachOnline.Models
+﻿namespace SachOnline.Models
 {
     using System;
     using System.Collections.Generic;
@@ -16,18 +16,26 @@ namespace SachOnline.Models
         }
 
         [Key]
+        [Required(ErrorMessage ="Vui lòng không bỏ trống trường này")]
         [StringLength(10)]
+
+
         public string SDT { get; set; }
 
-        [StringLength(50)]
+        [Required(ErrorMessage = "Vui lòng không bỏ trống trường này")]
+        [StringLength(10)]
         public string TenKH { get; set; }
 
         [StringLength(50)]
+        [Required(ErrorMessage = "Vui lòng không bỏ trống trường này")]
         public string Email { get; set; }
 
+        [Required(ErrorMessage = "Vui lòng không bỏ trống trường này")]
         [StringLength(50)]
+        [DataType(DataType.Password)]
         public string MatKhau { get; set; }
-
+        
+        [Required(ErrorMessage = "Vui lòng không bỏ trống trường này")]
         [StringLength(50)]
         public string DiaChi { get; set; }
 

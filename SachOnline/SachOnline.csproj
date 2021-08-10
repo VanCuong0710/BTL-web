@@ -136,12 +136,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Buss\DanhMucSanPhamBus.cs" />
-    <Compile Include="Buss\KhachHangBuss.cs" />
     <Compile Include="Buss\NhaXuatBanBus.cs" />
     <Compile Include="Buss\SanPhamBus.cs" />
     <Compile Include="Controllers\DanhMucSanPhamsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\KhachHangsController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\NhaXuatBansController.cs" />
     <Compile Include="Controllers\SanPhamsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -207,6 +206,7 @@
     <Content Include="Assets\js\bootstrap.min.js" />
     <Content Include="Assets\js\jquery-2.1.1.js" />
     <Content Include="Assets\js\photo-gallery.js" />
+    <Content Include="Assets\js\Register.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -297,11 +297,8 @@
     <Content Include="Views\Shared\_NhaXuatBanIndex.cshtml" />
     <Content Include="Views\Shared\_DanhMucSanPhanInterFacePratical.cshtml" />
     <Content Include="Views\Shared\_SanPhamLienQuanParticalView.cshtml" />
-    <Content Include="Views\KhachHangs\Create.cshtml" />
-    <Content Include="Views\KhachHangs\Delete.cshtml" />
-    <Content Include="Views\KhachHangs\Details.cshtml" />
-    <Content Include="Views\KhachHangs\Edit.cshtml" />
-    <Content Include="Views\KhachHangs\Index.cshtml" />
+    <Content Include="Views\Login\Register.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

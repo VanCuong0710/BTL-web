@@ -1,34 +1,66 @@
-﻿@model IEnumerable<SachOnline.Models.DanhMucSanPham>
+﻿@model PagedList.IPagedList<SachOnline.Models.SanPham>
+@using PagedList.Mvc;
+
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
+<div id="page-content" class="single-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="category.html">Category</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div id="main-content" class="col-md-8">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="products">
 
-<h2>Index</h2>
+                            @foreach (var item in Model)
+                            {
+                                <div class="col-lg-4 col-md-4 col-xs-12">
+                                    <div class="product">
+                                        <div class="image"><a href="@Url.Action("Details","SanPhams",new { id=item.MaSP})"><img style="width:250px;height:500px;" src="~/Assets/images//@item.HinhAnh" /></a></div>
+                                        <div class="buttons">
+                                            <a class="btn cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                                            <a class="btn wishlist" href="#"><span class="glyphicon glyphicon-heart"></span></a>
+                                            <a class="btn compare" href="#"><span class="glyphicon glyphicon-transfer"></span></a>
+                                        </div>
+                                        <div class="caption">
+                                            <div class="name"><h3><a href="@Url.Action("Details","SanPhams",new { id=item.MaSP})">@item.TenSP</a></h3></div>
+                                            <div class="price">Giá :@item.Gia VNĐ</div>
+                                            <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.TenDanhMuc)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TenDanhMuc)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MaDanhMuc }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MaDanhMuc }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MaDanhMuc })
-        </td>
-    </tr>
-}
+                    </div>
+                </div>
 
-</table>
+                <div class="row text-center">
+                    Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+                    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+                </div>
+            </div>
+            <div id="sidebar" class="col-md-4">
+
+                @Html.Partial("_DanhMucSanPhanInterFacePratical", SachOnline.Buss.DanhMucSanPhamBus.DanhSach())
+
+
+                @Html.Partial("_NhaXuatBanIndex", SachOnline.Buss.NhaXuatBanBus.DanhSach())
+
+                @Html.Partial("_SanPhamLienQuanParticalView", SachOnline.Buss.SanPhamBus.DanhSachLay3())
+            </div>
+        </div>
+    </div>
+</div>

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
 using SachOnline.Models;
 
 namespace SachOnline.Controllers
@@ -15,9 +16,13 @@ namespace SachOnline.Controllers
         private DataBase db = new DataBase();
 
         // GET: NhaXuatBans
-        public ActionResult Index()
+        public ActionResult Index(string id,int page =1,int pagesize =3)
         {
-            return View(db.NhaXuatBans.ToList());
+            DataBase mydb = new DataBase();
+            var sp = mydb.SanPhams.Select(s => s);
+            sp = sp.OrderBy(s => s.Gia);
+            sp = sp.Where(s => s.MaNXB == id);
+            return View(sp.ToPagedList(page,pagesize));
         }
 
         // GET: NhaXuatBans/Details/5

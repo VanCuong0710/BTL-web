@@ -4,7 +4,7 @@
         <ul class="list-unstyled">
             @foreach (var item in Model)
             {
-                <li><a href="category.html">@item.TenDanhMuc</a></li>
+                <li><a href="@Url.Action("Index","DanhMucSanPhams", new { id=item.MaDanhMuc})">@item.TenDanhMuc</a></li>
             }
 
         </ul>
