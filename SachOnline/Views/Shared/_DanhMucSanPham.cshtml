@@ -1,0 +1,12 @@
+﻿@model IEnumerable<SachOnline.Models.DanhMucSanPham>
+<div class="dropdown-menu">
+    <div class="dropdown-inner">
+        <ul class="list-unstyled">
+            @foreach (var item in Model)
+            {
+                <li><a href="category.html">@item.TenDanhMuc</a></li>
+            }
+
+        </ul>
+    </div>
+</div>
