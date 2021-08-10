@@ -142,7 +142,6 @@
     <Compile Include="Controllers\DanhMucSanPhamsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KhachHangsController.cs" />
-    <Compile Include="Controllers\LocDuLieuController.cs" />
     <Compile Include="Controllers\NhaXuatBansController.cs" />
     <Compile Include="Controllers\SanPhamsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -303,7 +302,6 @@
     <Content Include="Views\KhachHangs\Details.cshtml" />
     <Content Include="Views\KhachHangs\Edit.cshtml" />
     <Content Include="Views\KhachHangs\Index.cshtml" />
-    <Content Include="Views\LocDuLieu\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
