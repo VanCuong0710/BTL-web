@@ -13,7 +13,6 @@ namespace SachOnline.Models
         }
 
         public virtual DbSet<AccountAdmin> AccountAdmins { get; set; }
-        public virtual DbSet<ChiTietGioHang> ChiTietGioHangs { get; set; }
         public virtual DbSet<DanhMucSanPham> DanhMucSanPhams { get; set; }
         public virtual DbSet<GioHang> GioHangs { get; set; }
         public virtual DbSet<KhachHang> KhachHangs { get; set; }
@@ -23,19 +22,9 @@ namespace SachOnline.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<ChiTietGioHang>()
-                .Property(e => e.TenSP)
-                .IsFixedLength()
-                .IsUnicode(false);
-
             modelBuilder.Entity<DanhMucSanPham>()
                 .HasMany(e => e.SanPhams)
                 .WithRequired(e => e.DanhMucSanPham)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<GioHang>()
-                .HasMany(e => e.ChiTietGioHangs)
-                .WithRequired(e => e.GioHang)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<KhachHang>()
@@ -49,7 +38,7 @@ namespace SachOnline.Models
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<SanPham>()
-                .HasMany(e => e.ChiTietGioHangs)
+                .HasMany(e => e.GioHangs)
                 .WithRequired(e => e.SanPham)
                 .WillCascadeOnDelete(false);
         }

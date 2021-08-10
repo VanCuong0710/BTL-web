@@ -147,11 +147,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountAdmin.cs" />
-    <Compile Include="Models\ChiTietGioHang.cs" />
     <Compile Include="Models\DanhMucSanPham.cs" />
-    <Compile Include="Models\DataBase.cs" />
     <Compile Include="Models\GioHang.cs" />
     <Compile Include="Models\KhachHang.cs" />
+    <Compile Include="Models\DataBase.cs" />
     <Compile Include="Models\NhaXuatBan.cs" />
     <Compile Include="Models\SanPham.cs" />
     <Compile Include="Models\sysdiagram.cs" />

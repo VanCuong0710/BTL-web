@@ -16,27 +16,24 @@
         }
 
         [Key]
-        [Required(ErrorMessage ="Vui lòng không bỏ trống trường này")]
         [StringLength(10)]
-
-
+        [Required(ErrorMessage ="Trường này không được để trống")]
         public string SDT { get; set; }
 
-        [Required(ErrorMessage = "Vui lòng không bỏ trống trường này")]
-        [StringLength(10)]
+        [StringLength(50)]
+        [Required(ErrorMessage = "Trường này không được để trống")]
         public string TenKH { get; set; }
 
         [StringLength(50)]
-        [Required(ErrorMessage = "Vui lòng không bỏ trống trường này")]
+        [Required(ErrorMessage = "Trường này không được để trống")]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "Vui lòng không bỏ trống trường này")]
         [StringLength(50)]
-        [DataType(DataType.Password)]
+        [Required(ErrorMessage = "Trường này không được để trống")]
         public string MatKhau { get; set; }
-        
-        [Required(ErrorMessage = "Vui lòng không bỏ trống trường này")]
+
         [StringLength(50)]
+        [Required(ErrorMessage = "Trường này không được để trống")]
         public string DiaChi { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

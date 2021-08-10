@@ -21,5 +21,8 @@ namespace SachOnline.Models
 
         [StringLength(10)]
         public string SDT { get; set; }
+
+        [StringLength(50)]
+        public string Quyen { get; set; }
     }
 }
