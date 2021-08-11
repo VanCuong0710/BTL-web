@@ -7,7 +7,7 @@ using SachOnline.Models;
 namespace SachOnline.Controllers
 {
     public class HomeController : Controller
-    {
+    { 
       
         public ActionResult Index()
         {
