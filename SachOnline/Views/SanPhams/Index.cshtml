@@ -29,7 +29,7 @@
                                         <div class="buttons">
                                             @if (HttpContext.Current.Session["SDT"] == null)
                                             {
-                                                <a class="btn cart" href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                                                <a class="btn cart" href="@Url.Action("Index","Login")"><span class="glyphicon glyphicon-shopping-cart"></span></a>
                                             }
                                             else
                                             {
@@ -60,10 +60,7 @@
             <div id="sidebar" class="col-md-4">
 
                 @Html.Partial("_DanhMucSanPhanInterFacePratical", SachOnline.Buss.DanhMucSanPhamBus.DanhSach())
-
-
                 @Html.Partial("_NhaXuatBanIndex", SachOnline.Buss.NhaXuatBanBus.DanhSach())
-
                 @Html.Partial("_SanPhamLienQuanParticalView", SachOnline.Buss.SanPhamBus.DanhSachLay3())
             </div>
         </div>
