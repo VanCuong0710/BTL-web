@@ -56,17 +56,27 @@
                 </div>
                 <div class="col-xs-6">
                     <ul class="top-link">
-                        <li><a href="@Url.Action("Register","Login")"><span class="glyphicon glyphicon-user"></span>Đăng ký</a></li>
-                        <li><a href="@Url.Action("Index","Login")"><span class="glyphicon glyphicon-user"></span>Đăng nhập</a></li>
-                        <li><a href="@Url.Action("Logout","Login")"><span></span>Đăng xuất</a></li>
+                        @if (HttpContext.Current.Session["SDT"] == null)
+                        {
 
+                            <li><a href="@Url.Action("Register","Login")"><span class="glyphicon glyphicon-user"></span>Đăng ký</a></li>
+                            <li><a href="@Url.Action("Index","Login")"><span class="glyphicon glyphicon-user"></span>Đăng nhập</a></li>
+
+
+
+                        }
+                        else
+                        {
+                            <li><a href="@Url.Action("Logout","Login")"><span></span>Đăng xuất</a></li>
+                        }
                     </ul>
+
                     @if (HttpContext.Current.Session["SDT"] == null)
                     {
-
+                        <span>Bạn chưa đăng nhập!!!<br /></span>
                     }
                     else
-                    {   <span>Bạn đã đăng nhập thành công!!!<br /></span>
+                    { <span>Bạn đã đăng nhập thành công!!!<br /></span>
                         <span>Xin chào @Session["SDT"]</span>
                     }
                 </div>
@@ -89,7 +99,14 @@
                 </div>
             }
             <div class="col-md-4">
-                <div id="cart"><a class="btn btn-1" href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span>CART : 0 ITEM</a></div>
+                @if (HttpContext.Current.Session["SDT"] == null)
+                {
+                    <div id="cart"><a class="btn btn-1" href="#"><span class="glyphicon glyphicon-shopping-cart"></span>CART </a></div>
+                }
+                else
+                {
+                    <div id="cart"><a class="btn btn-1" href="@Url.Action("XemGioHang","ShoppingCart")"><span class="glyphicon glyphicon-shopping-cart"></span>CART </a></div>
+                }
             </div>
         </div>
     </header>

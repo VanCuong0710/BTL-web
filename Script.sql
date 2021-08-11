@@ -69,7 +69,6 @@ Create table [GioHang]
 	[SDT] Nvarchar(10) NOT NULL,
 	[MaSP] Nvarchar(50) NOT NULL,
 	[SoLuong] Integer NULL,
-	[TongTien] Integer NULL,
 Constraint [pk_GioHang] Primary Key ([SDT],[MaSP])
 ) 
 go
@@ -120,3 +119,4 @@ GO
 
 insert into KhachHang values('0123456789',N'Văn Cường','Cuong@gmail.com','1',N'Chí Tân')
 go
+insert into GioHang values('0123456789','SP01',1)

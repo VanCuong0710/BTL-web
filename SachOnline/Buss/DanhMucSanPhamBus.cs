@@ -19,6 +19,7 @@ namespace SachOnline.Buss
             DataBase mydb = new DataBase();
             var dm = mydb.DanhMucSanPhams.Select(p => p);
             return (dm);
+            
         }
     }
 }

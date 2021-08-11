@@ -84,7 +84,6 @@ C:\Users\84866\Desktop\BTL WEB\LamLaiBTL\SachOnline\bin\PagedList.dll
 C:\Users\84866\Desktop\BTL WEB\LamLaiBTL\SachOnline\bin\PagedList.Mvc.dll
 C:\Users\84866\Desktop\BTL WEB\LamLaiBTL\SachOnline\bin\PagedList.xml
 C:\Users\84866\Desktop\BTL WEB\LamLaiBTL\SachOnline\bin\PagedList.Mvc.xml
-C:\Users\84866\Desktop\BTL WEB\LamLaiBTL\SachOnline\obj\Debug\SachOnline.csproj.AssemblyReference.cache
 C:\Users\84866\Desktop\SachOnline\bin\SachOnline.dll.config
 C:\Users\84866\Desktop\SachOnline\bin\SachOnline.dll
 C:\Users\84866\Desktop\SachOnline\bin\SachOnline.pdb
@@ -172,3 +171,4 @@ C:\Users\84866\Desktop\SachOnline\obj\Debug\SachOnline.csproj.CoreCompileInputs.
 C:\Users\84866\Desktop\SachOnline\obj\Debug\SachOnline.csproj.CopyComplete
 C:\Users\84866\Desktop\SachOnline\obj\Debug\SachOnline.dll
 C:\Users\84866\Desktop\SachOnline\obj\Debug\SachOnline.pdb
+C:\Users\84866\Desktop\BTL WEB\LamLaiBTL\SachOnline\obj\Debug\SachOnline.csproj.AssemblyReference.cache

@@ -1,0 +1,71 @@
+﻿@model PagedList.IPagedList<SachOnline.Models.GioHang>
+@using PagedList.Mvc;
+
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+@{
+    ViewBag.Title = "xoaspfromcart";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<style>
+    #customers {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+        #customers td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #customers tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #customers tr:hover {
+            background-color: #ddd;
+        }
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #04AA6D;
+            color: white;
+        }
+</style>
+
+<body>
+    <br />
+    <h1 style="color:red" align="Center">Giỏ hàng của bạn</h1>
+    <br />
+    <table id="customers" align="center">
+        <tr>
+            <th>Hình ảnh</th>
+            <th>Tên sản phẩm</th>
+            <th>Giá</th>
+            <th>Số lượng</th>
+            <th colspan="2">Bạn muốn</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td><a href="@Url.Action("Details","SanPhams",new { id=item.SanPham.MaSP})"><img style="width:80px;height:120px;" src="~/Assets/images/@item.SanPham.HinhAnh" /></a></td>
+                <td>@item.SanPham.TenSP</td>
+                <td>@item.SanPham.Gia</td>
+                <td>@item.SoLuong</td>
+                <td align="center"><a href="@Url.Action("AddToCart","ShoppingCart",new { id=item.MaSP})"><img style="width:40px;height:40px;" src="~/Assets/images/add.png" /></a></td>
+                <td align="center"><a href="@Url.Action("xoaspfromcart","ShoppingCart",new { id=item.MaSP})"><img style="width:40px;height:40px;" src="~/Assets/images/delete.png" /></a></td>
+            </tr>
+        }
+
+
+    </table>
+
+</body>
+<div align="center">
+    Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+    @Html.PagedListPager(Model, page => Url.Action("XemGioHang", new { page }))
+</div>
+
