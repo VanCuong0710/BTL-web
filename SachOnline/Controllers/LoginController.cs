@@ -27,7 +27,7 @@ namespace SachOnline.Controllers
             else
             {
                 Session["SDT"] = kh.SDT;
-                return RedirectToAction("Index","SanPhams");
+                return RedirectToAction("Home","SanPhams");
             }    
         }
    

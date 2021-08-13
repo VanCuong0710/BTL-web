@@ -80,6 +80,6 @@
 </body>
 <div align="center">
     Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
-    @Html.PagedListPager(Model, page => Url.Action("XemGioHang", new { page }))
+    @Html.PagedListPager(Model, page => Url.Action("AddToCart", new { page }))
 </div>
 

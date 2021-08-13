@@ -15,6 +15,14 @@ namespace SachOnline.Controllers
         private DataBase db = new DataBase();
 
         // GET: SanPhams
+        public ActionResult Home(int? page)
+        {
+            var sanPhams = db.SanPhams.Include(s => s.DanhMucSanPham).Include(s => s.NhaXuatBan);
+            sanPhams = sanPhams.OrderBy(s => s.Gia);
+            int pageSize = 8;
+            int pageNumber = (page ?? 1);
+            return View(sanPhams.ToPagedList(pageNumber, pageSize));
+        }
         public ActionResult Index(string seachString, int ?page)
         {
             var sanPhams = db.SanPhams.Include(s => s.DanhMucSanPham).Include(s => s.NhaXuatBan);

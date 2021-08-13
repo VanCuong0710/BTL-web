@@ -58,8 +58,15 @@
                                 </select>
                             </div>
                             <div class="rating"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star-empty"></span></div>
-                            <div class="well"><label>Qty: </label>
-                            <input class="form-inline quantity" type="text" value="1"><a href="#" class="btn btn-2 ">ADD</a></div>
+
+                            @if (HttpContext.Current.Session["SDT"] == null)
+                            {
+                                <a class="btn cart" href="@Url.Action("Index","Login")"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                            }
+                            else
+                            {
+                                <a class="btn cart" href="@Url.Action("AddToCart", "ShoppingCart", new { id = Model.MaSP })"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                            }
                             <div class="share well">
                                 <strong style="margin-right: 13px;">Share :</strong>
                                 <a href="#" class="share-btn" target="_blank">
