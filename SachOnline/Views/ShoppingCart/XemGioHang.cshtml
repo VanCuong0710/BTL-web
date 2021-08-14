@@ -49,37 +49,45 @@
             <th>Thành tiền</th>
             <th colspan="2">Bạn muốn</th>
         </tr>
-        @{ 
+        @{
             var tongtien = 0;
+        }
+        @{
+            var count = 0;
         }
         @foreach (var item in Model)
         {
-    <tr>
-        <td><a href="@Url.Action("Details","SanPhams",new { id=item.SanPham.MaSP})"><img style="width:80px;height:120px;" src="~/Assets/images/@item.SanPham.HinhAnh" /></a></td>
-        <td>@item.SanPham.TenSP</td>
-        <td>@item.SanPham.Gia</td>
-        <td>@item.SoLuong</td>
-        <td>
-            @{ 
-                var x = item.SoLuong;
-                var y = item.SanPham.Gia;
-                var z = x * y;
-                tongtien = (int)(tongtien + z);
-                <span>@z</span>
-            }
-        </td>
-        <td align="center"><a href="@Url.Action("AddToCart","ShoppingCart",new { id=item.MaSP})"><img style="width:40px;height:40px;" src="~/Assets/images/add.png" /></a></td>
-        <td align="center"><a href="@Url.Action("xoaspfromcart","ShoppingCart",new { id=item.MaSP})"><img style="width:40px;height:40px;" src="~/Assets/images/delete.png" /></a></td>
-    </tr>
+            count = count + 1;
+            <tr>
+                <td><a href="@Url.Action("Details","SanPhams",new { id=item.SanPham.MaSP})"><img style="width:80px;height:120px;" src="~/Assets/images/@item.SanPham.HinhAnh" /></a></td>
+                <td>@item.SanPham.TenSP</td>
+                <td>@item.SanPham.Gia</td>
+                <td>@item.SoLuong</td>
+                <td>
+                    @{
+                        var x = item.SoLuong;
+                        var y = item.SanPham.Gia;
+                        var z = x * y;
+                        tongtien = (int)(tongtien + z);
+                        <span>@z</span>
+                    }
+                </td>
+                <td align="center"><a href="@Url.Action("AddToCart","ShoppingCart",new { id=item.MaSP})"><img style="width:40px;height:40px;" src="~/Assets/images/add.png" /></a></td>
+                <td align="center"><a href="@Url.Action("xoaspfromcart","ShoppingCart",new { id=item.MaSP})"><img style="width:40px;height:40px;" src="~/Assets/images/delete.png" /></a></td>
+            </tr>
         }
 
 
     </table>
+    @if (count == 0)
+    {
+        <h1 align="center">Không có sản phẩm nào</h1>
+    }
     <br />
     <h2 align="right" style="color:red;">Tổng tiền: @tongtien</h2>
 </body>
 <div align="center">
     Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
-    @Html.PagedListPager(Model, page => Url.Action("AddToCart", new { page }))
+    @Html.PagedListPager(Model, page => Url.Action("XemGioHang", new { page }))
 </div>
 

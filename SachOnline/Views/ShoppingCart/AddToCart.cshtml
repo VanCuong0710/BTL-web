@@ -52,8 +52,12 @@
         @{
             var tongtien = 0;
         }
+        @{
+            var count = 0;
+        }
         @foreach (var item in Model)
         {
+            count = count + 1;
             <tr>
                 <td><a href="@Url.Action("Details","SanPhams",new { id=item.SanPham.MaSP})"><img style="width:80px;height:120px;" src="~/Assets/images/@item.SanPham.HinhAnh" /></a></td>
                 <td>@item.SanPham.TenSP</td>
@@ -75,11 +79,15 @@
 
 
     </table>
+    @if (count == 0)
+    {
+        <h1 align="center">Không có sản phẩm nào</h1>
+    }
     <br />
     <h2 align="right" style="color:red;">Tổng tiền: @tongtien</h2>
 </body>
 <div align="center">
     Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
-    @Html.PagedListPager(Model, page => Url.Action("xoaspfromcart", new { page }))
+    @Html.PagedListPager(Model, page => Url.Action("AddToCart", new { page }))
 </div>
 

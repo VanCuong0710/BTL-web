@@ -34,7 +34,7 @@ namespace SachOnline.Controllers
             }
 
         }
-        public ActionResult xoaspfromcart(String id, int page = 1, int pagesize = 5)
+        public ActionResult xoaspfromcart(String id, int page = 1, int pagesize = 10)
         {
             DataBase mydb = new DataBase();
             string sdt = Session["SDT"].ToString();
@@ -48,7 +48,7 @@ namespace SachOnline.Controllers
 
         }
         // GET: ShoppingCart
-        public ActionResult AddToCart(string id, int page = 1, int pagesize = 5)
+        public ActionResult AddToCart(string id, int page = 1, int pagesize = 10)
         {
             DataBase mydb = new DataBase();
             string sdt = Session["SDT"].ToString();
@@ -59,7 +59,7 @@ namespace SachOnline.Controllers
             return View(sp.ToPagedList(page, pagesize));
         }
         
-        public ActionResult XemGioHang(int page = 1, int pagesize = 5)
+        public ActionResult XemGioHang(int page = 1, int pagesize = 10)
         {
             DataBase mydb = new DataBase();
             string sdt = Session["SDT"].ToString();
