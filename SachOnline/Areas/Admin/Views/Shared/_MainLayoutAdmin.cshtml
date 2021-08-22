@@ -71,29 +71,35 @@ The above copyright notice and this permission notice shall be included in all c
                                 {
 
 
+                <li class="nav-item ">
+                    <a class="nav-link" href="@Url.Action("Index","BLOGs")">
+                        <i class="material-icons">content_paste</i>
+                        <p>Danh sách Blogs</p>
+                    </a>
+                </li>
                                     <li class="nav-item ">
-                                        <a class="nav-link" href="@Url.Action("Index","BLOGs")">
-                                            <i class="material-icons">content_paste</i>
-                                            <p>Danh sách Blogs</p>
-                                        </a>
-                                    </li>
-                                                        <li class="nav-item ">
-                                                            <a class="nav-link" href="@Url.Action("Logout","LoginAdmin")">
-                                                                <i class="material-icons">person</i>
-                                                                <p>Đăng xuất</p>
-                                                            </a>
-                                                        </li>
- }
-                                                    if (Session["Quyen"].ToString().Equals("ADMIN"))
-                                                    {
-                                    <li class="nav-item ">
-                                        <a class="nav-link" href="./user.html">
+                                        <a class="nav-link" href="@Url.Action("Logout","LoginAdmin")">
                                             <i class="material-icons">person</i>
-                                            <p>Thông tin của bạn</p>
+                                            <p>Đăng xuất</p>
+                                        </a>
+                                    </li>
+ }
+                                if (Session["Quyen"].ToString().Equals("ADMIN"))
+                                {
+                <li class="nav-item ">
+                    <a class="nav-link" href="@Url.Action("Index","AccountAdmins")">
+                        <i class="material-icons">content_paste</i>
+                        <p>Quản lý tài khoản</p>
+                    </a>
+                </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link" href="@Url.Action("Index","BLOGS")">
+                                            <i class="material-icons">content_paste</i>
+                                            <p>BLOGS</p>
                                         </a>
                                     </li>
                                                         <li class="nav-item ">
-                                                            <a class="nav-link" href="./tables.html">
+                                                            <a class="nav-link" href="#">
                                                                 <i class="material-icons">content_paste</i>
                                                                 <p>Danh mục sản phẩm</p>
                                                             </a>

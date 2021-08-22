@@ -136,6 +136,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AccountAdminsController.cs" />
     <Compile Include="Areas\Admin\Controllers\BLOGsController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginAdminController.cs" />
     <Compile Include="Buss\CartItem.cs" />
@@ -476,6 +477,11 @@
     <Content Include="Areas\Admin\Views\BLOGs\Details.cshtml" />
     <Content Include="Areas\Admin\Views\BLOGs\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\BLOGs\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\AccountAdmins\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\AccountAdmins\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\AccountAdmins\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\AccountAdmins\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\AccountAdmins\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

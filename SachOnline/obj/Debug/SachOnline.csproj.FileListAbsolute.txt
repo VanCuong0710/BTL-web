@@ -171,3 +171,4 @@ C:\Users\84866\Desktop\SachOnline\obj\Debug\SachOnline.csproj.CoreCompileInputs.
 C:\Users\84866\Desktop\SachOnline\obj\Debug\SachOnline.csproj.CopyComplete
 C:\Users\84866\Desktop\SachOnline\obj\Debug\SachOnline.dll
 C:\Users\84866\Desktop\SachOnline\obj\Debug\SachOnline.pdb
+C:\Users\84866\Desktop\BTL WEB\LamLaiBTL\SachOnline\obj\Debug\SachOnline.csproj.AssemblyReference.cache

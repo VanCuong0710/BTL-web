@@ -35,7 +35,14 @@ namespace SachOnline.Areas.Admin.Controllers
                 Session["MATK"] = tk.MaTK;
                 Session["Ten"] = check.Ten;
                 Session["Quyen"] = check.Quyen;
-                return RedirectToAction("Index","BLOGs");
+                if(Session["Quyen"].ToString().Equals("ADMIN"))
+                {
+                    return RedirectToAction("Index", "AccountAdmins");
+                }    
+                else
+                {
+                    return RedirectToAction("Index", "BLOGs");
+                }    
             }
         }
         public ActionResult Logout()
