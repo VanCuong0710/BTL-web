@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
 using SachOnline.Models;
 
 namespace SachOnline.Areas.Admin.Controllers
@@ -15,9 +16,17 @@ namespace SachOnline.Areas.Admin.Controllers
         private DataBase db = new DataBase();
 
         // GET: Admin/BLOGs
-        public ActionResult Index()
+        public ActionResult Index(string searchString, int? page)
         {
-            return View(db.BLOGs.ToList());
+            var blogs = db.BLOGs.Select(p => p);
+            if (searchString!=null)
+            {
+                blogs = blogs.Where(p => p.TenBlog.Contains(searchString));
+            }
+            blogs = blogs.OrderBy(s => s.MaBlog);
+            int pageSize = 5;
+            int pageNumber = (page ?? 1);
+            return View(blogs.ToPagedList(pageNumber, pageSize));
         }
 
         // GET: Admin/BLOGs/Details/5
@@ -48,14 +57,22 @@ namespace SachOnline.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "MaBlog,TenBlog,NoiDungBlog")] BLOG bLOG)
         {
-            if (ModelState.IsValid)
+            try
             {
-                db.BLOGs.Add(bLOG);
-                db.SaveChanges();
+                if (ModelState.IsValid)
+                {
+                    db.BLOGs.Add(bLOG);
+                    db.SaveChanges();
+                    
+                }
                 return RedirectToAction("Index");
-            }
 
-            return View(bLOG);
+            }
+            catch (Exception)
+            {
+                ViewBag.Error = "Lỗi nhập dữ liệu !";
+                return View(bLOG);
+            }
         }
 
         // GET: Admin/BLOGs/Edit/5
@@ -80,13 +97,22 @@ namespace SachOnline.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "MaBlog,TenBlog,NoiDungBlog")] BLOG bLOG)
         {
-            if (ModelState.IsValid)
+            try
             {
-                db.Entry(bLOG).State = EntityState.Modified;
-                db.SaveChanges();
+                if (ModelState.IsValid)
+                {
+                    db.Entry(bLOG).State = EntityState.Modified;
+                    db.SaveChanges();
+                   
+                }
                 return RedirectToAction("Index");
             }
-            return View(bLOG);
+            catch (Exception)
+            {
+                ViewBag.Error = "Lỗi nhập dữ liệu !";
+                return View(bLOG);
+             
+            }
         }
 
         // GET: Admin/BLOGs/Delete/5

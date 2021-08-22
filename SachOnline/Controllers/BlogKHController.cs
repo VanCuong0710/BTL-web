@@ -11,7 +11,7 @@ using SachOnline.Models;
 namespace SachOnline.Controllers
 {
     
-    public class BlogsController : Controller
+    public class BlogKHController : Controller
     {
         // GET: Blogs
         public ActionResult Index()

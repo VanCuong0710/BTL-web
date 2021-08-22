@@ -1,0 +1,18 @@
+﻿@model IEnumerable<SachOnline.Models.BLOG>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+@foreach (var item in Model)
+{
+    <div>
+        <h1 align="Center" style="color:red">Tên blog: @item.TenBlog</h1>
+        <br />
+        <div margin-left:50px;>
+            <h3>Nội dung: <br /> @item.NoiDungBlog</h3>
+        </div>
+    </div>
+}
+

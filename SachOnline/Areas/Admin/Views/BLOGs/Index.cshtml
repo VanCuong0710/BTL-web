@@ -1,4 +1,6 @@
-﻿@model IEnumerable<SachOnline.Models.BLOG>
+﻿@model PagedList.IPagedList<SachOnline.Models.BLOG>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
 @{
     ViewBag.Title = "Index";
@@ -9,11 +11,23 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
+                <p>
+                    @Html.ActionLink("Tạo mới", "Create")
+                </p>
+                @using (Html.BeginForm())
+                {
+                    <p>
+
+                        Tìm blogs: @Html.TextBox("searchString")
+                        <input type="submit" value="Tìm" />
+                    </p>
+                }
                 <div class="card">
                     <div class="card-header card-header-primary">
                         <h4 class="card-title ">Danh sách blog</h4>
                     </div>
                     <div class="card-body">
+
                         <div class="table-responsive">
                             <table class="table">
                                 <thead class=" text-primary">
@@ -45,21 +59,22 @@
                                                 @item.NoiDungBlog
                                             </td>
                                             <td>
-                                                @Html.ActionLink("Sửa", "Edit", new { id = item.MaBlog }) 
+                                                @Html.ActionLink("Sửa", "Edit", new { id = item.MaBlog })
                                             </td>
                                             <td class="text-primary">
                                                 @Html.ActionLink("Xóa", "Delete", new { id = item.MaBlog })
                                             </td>
                                         </tr>
                                     }
-
                                 </tbody>
                             </table>
                         </div>
+                        Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+                        @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
 </div>

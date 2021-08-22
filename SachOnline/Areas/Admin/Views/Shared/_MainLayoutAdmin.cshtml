@@ -119,7 +119,9 @@ The above copyright notice and this permission notice shall be included in all c
 
             @RenderBody()
 
-
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrap")
+            @RenderSection("scripts", required: false)
         </div>
     </div>
     <div class="fixed-plugin">

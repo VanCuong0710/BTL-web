@@ -142,7 +142,7 @@
     <Compile Include="Buss\DanhMucSanPhamBus.cs" />
     <Compile Include="Buss\NhaXuatBanBus.cs" />
     <Compile Include="Buss\SanPhamBus.cs" />
-    <Compile Include="Controllers\BlogsController.cs" />
+    <Compile Include="Controllers\BlogKHController.cs" />
     <Compile Include="Controllers\DanhMucSanPhamsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KhachHangsController.cs" />
@@ -533,7 +533,7 @@
     <Content Include="Views\KhachHangs\Edit.cshtml" />
     <Content Include="Views\KhachHangs\Index.cshtml" />
     <Content Include="Views\SanPhams\Home.cshtml" />
-    <Content Include="Views\Blogs\Index.cshtml" />
+    <Content Include="Views\BlogKH\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
