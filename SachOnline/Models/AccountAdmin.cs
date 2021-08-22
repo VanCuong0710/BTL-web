@@ -1,4 +1,4 @@
-namespace SachOnline.Models
+﻿namespace SachOnline.Models
 {
     using System;
     using System.Collections.Generic;
@@ -10,19 +10,24 @@ namespace SachOnline.Models
     public partial class AccountAdmin
     {
         [Key]
+        [Required(ErrorMessage = "Trường này không được để trống")]
         [StringLength(50)]
         public string MaTK { get; set; }
 
         [StringLength(50)]
+        [Required(ErrorMessage = "Trường này không được để trống")]
         public string MatKhau { get; set; }
 
         [StringLength(50)]
+        [Required(ErrorMessage = "Trường này không được để trống")]
         public string Ten { get; set; }
 
         [StringLength(10)]
+        [Required(ErrorMessage = "Trường này không được để trống")]
         public string SDT { get; set; }
 
         [StringLength(50)]
+        [Required(ErrorMessage = "Trường này không được để trống")]
         public string Quyen { get; set; }
     }
 }

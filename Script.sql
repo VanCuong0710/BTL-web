@@ -136,3 +136,5 @@ insert into BLOG values('BLOG02',N'Nên đọc sách vào thời gian nào?',N'N
 insert into BLOG values('BLOG03',N'Tại sao phải đọc sách?',N'Một loạt các nghiên cứu khoa học đã chứng minh rằng đọc sách mang lại rất nhiều lợi ích cho sức khỏe tinh thần của bạn, đồng thời giúp bạn cải thiện bản thân một cách toàn diện.')
 insert into BLOG values('BLOG04',N'Nên đọc sách vào thời gian nào?',N'Nhiều chuyên gia khẳng định rằng đọc sách vào buổi sáng là thời điểm tốt nhất để đọc. Chúng ta tỉnh táo và tập trung nhất vào buổi sáng, điều này giúp chúng ta lưu giữ thông tin mới tốt hơn. Nếu bạn khó ngủ vào ban đêm, đọc sách có thể giúp ích cho bạn.')
 go
+insert into AccountAdmin values('TK001',N'1',N'Nguyễn văn Cường',N'0123456789',N'ADMIN')
+insert into AccountAdmin values('TK002',N'1',N'Nguyễn văn Cường',N'0123456789',N'NV')
