@@ -139,6 +139,7 @@
     <Compile Include="Buss\DanhMucSanPhamBus.cs" />
     <Compile Include="Buss\NhaXuatBanBus.cs" />
     <Compile Include="Buss\SanPhamBus.cs" />
+    <Compile Include="Controllers\BlogsController.cs" />
     <Compile Include="Controllers\DanhMucSanPhamsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KhachHangsController.cs" />
@@ -150,13 +151,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountAdmin.cs" />
+    <Compile Include="Models\BLOG.cs" />
     <Compile Include="Models\DanhMucSanPham.cs" />
+    <Compile Include="Models\DataBase.cs" />
     <Compile Include="Models\GioHang.cs" />
     <Compile Include="Models\KhachHang.cs" />
-    <Compile Include="Models\DataBase.cs" />
     <Compile Include="Models\NhaXuatBan.cs" />
     <Compile Include="Models\SanPham.cs" />
-    <Compile Include="Models\sysdiagram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -312,6 +313,7 @@
     <Content Include="Views\KhachHangs\Edit.cshtml" />
     <Content Include="Views\KhachHangs\Index.cshtml" />
     <Content Include="Views\SanPhams\Home.cshtml" />
+    <Content Include="Views\Blogs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

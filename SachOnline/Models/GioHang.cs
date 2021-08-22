@@ -21,8 +21,6 @@ namespace SachOnline.Models
 
         public int? SoLuong { get; set; }
 
-        
-
         public virtual SanPham SanPham { get; set; }
 
         public virtual KhachHang KhachHang { get; set; }

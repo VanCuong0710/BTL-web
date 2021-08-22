@@ -122,13 +122,9 @@
                 <ul class="nav navbar-nav">
                     <li><a href="@Url.Action("Home","SanPhams")">Trang Chủ</a></li>
                     <li><a href="@Url.Action("Index","SanPhams")">Sản phẩm</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Danh mục sản phẩm</a>
-                        @Html.Partial("_DanhMucSanPham", SachOnline.Buss.DanhMucSanPhamBus.DanhSach())
-
-                    </li>
+                    @Html.Partial("_DanhMucSanPham", SachOnline.Buss.DanhMucSanPhamBus.DanhSach())
                     @Html.Partial("_NhaXuatBan", SachOnline.Buss.NhaXuatBanBus.DanhSach())
-
+                    <li><a href="@Url.Action("Index","Blogs")">Xem BLOG</a></li>
                 </ul>
             </div>
         </div>
@@ -144,34 +140,36 @@
                 <div class="row">
                     <div class="col-md-3 col-footer footer-1">
                         <img src="~/Assets/images//logofooter.png" />
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <p>
+                            Nhóm 3<br />
+                            Nguyễn Mạnh Cường<br />
+                            Nguyễn văn Cường<br />
+                            Phạm Việt Dũng
+                        </p>
                     </div>
                     <div class="col-md-3 col-footer footer-2">
-                        <div class="heading"><h4>Customer Service</h4></div>
+                        <div class="heading"><h4>Chăm sóc khách hàng</h4></div>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Delivery Information</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Thông tin về chúng tôi</a></li>
+                            <li><a href="#">Điều khoản</a></li>
+                            <li><a href="#">Liên lạc với chúng tôi</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3 col-footer footer-3">
-                        <div class="heading"><h4>My Account</h4></div>
+                        <div class="heading"><h4>Tài khoản của bạn</h4></div>
                         <ul>
-                            <li><a href="#">My Account</a></li>
-                            <li><a href="#">Brands</a></li>
-                            <li><a href="#">Gift Vouchers</a></li>
-                            <li><a href="#">Specials</a></li>
-                            <li><a href="#">Site Map</a></li>
+                            <li><a href="#">Sửa thông tin</a></li>
+                            <li><a href="#">Đăng nhập</a></li>
+                            <li><a href="#">Đăng xuất</a></li>
+                           
                         </ul>
                     </div>
                     <div class="col-md-3 col-footer footer-4">
                         <div class="heading"><h4>Contact Us</h4></div>
                         <ul>
-                            <li><span class="glyphicon glyphicon-home"></span>California, United States 3000009</li>
-                            <li><span class="glyphicon glyphicon-earphone"></span>+91 8866888111</li>
-                            <li><span class="glyphicon glyphicon-envelope"></span>infor@yoursite.com</li>
+                            <li><span class="glyphicon glyphicon-home"></span>Bắc Từ Liêm Hà Nội</li>
+                            <li><span class="glyphicon glyphicon-earphone"></span>0866653231</li>
+                            <li><span class="glyphicon glyphicon-envelope"></span>cuongcalmtodoit@gmail.com</li>
                         </ul>
                     </div>
                 </div>
@@ -181,7 +179,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        Your Store � 20xx - <a href="http://www.365bootstrap.com" rel="nofollow" target="_blank">Ecommerce Themes</a> Designed by <a href="http://www.365bootstrap.com" rel="nofollow" target="_blank">365BOOTSTRAP</a>
+                        Lập trình ứng dụng <a href="#" rel="nofollow" target="_blank">cơ sở dữ liệu trên Web</a> Được hướng dẫn bởi Thầy: <a href="#" rel="nofollow" target="_blank">ĐỖ NGỌC SƠN </a>
                     </div>
                     <div class="col-md-6">
                         <div class="pull-right">

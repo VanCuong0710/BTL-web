@@ -13,15 +13,23 @@ namespace SachOnline.Models
         }
 
         public virtual DbSet<AccountAdmin> AccountAdmins { get; set; }
+        public virtual DbSet<BLOG> BLOGs { get; set; }
         public virtual DbSet<DanhMucSanPham> DanhMucSanPhams { get; set; }
         public virtual DbSet<GioHang> GioHangs { get; set; }
         public virtual DbSet<KhachHang> KhachHangs { get; set; }
         public virtual DbSet<NhaXuatBan> NhaXuatBans { get; set; }
         public virtual DbSet<SanPham> SanPhams { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<BLOG>()
+                .Property(e => e.TenBlog)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<BLOG>()
+                .Property(e => e.NoiDungBlog)
+                .IsUnicode(false);
+
             modelBuilder.Entity<DanhMucSanPham>()
                 .HasMany(e => e.SanPhams)
                 .WithRequired(e => e.DanhMucSanPham)

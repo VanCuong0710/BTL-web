@@ -13,6 +13,7 @@ Create database SachOnline
 go
 use SachOnline
 go
+
 Create table [SanPham]
 (
 	[MaSP] Nvarchar(50) NOT NULL,
@@ -73,6 +74,15 @@ Constraint [pk_GioHang] Primary Key ([SDT],[MaSP])
 ) 
 go
 
+Create table [BLOG]
+(
+	[MaBlog] Nvarchar(50) NOT NULL,
+	[TenBlog] NText NULL,
+	[NoiDungBlog] NText NULL,
+Constraint [pk_BLOG] Primary Key ([MaBlog])
+) 
+go
+
 
 Alter table [GioHang] add  foreign key([MaSP]) references [SanPham] ([MaSP])  on update no action on delete no action 
 go
@@ -120,3 +130,9 @@ GO
 insert into KhachHang values('0123456789',N'Văn Cường','Cuong@gmail.com','1',N'Chí Tân')
 go
 insert into GioHang values('0123456789','SP01',1)
+go
+insert into BLOG values('BLOG01',N'Tại sao phải đọc sách?',N'Một loạt các nghiên cứu khoa học đã chứng minh rằng đọc sách mang lại rất nhiều lợi ích cho sức khỏe tinh thần của bạn, đồng thời giúp bạn cải thiện bản thân một cách toàn diện.')
+insert into BLOG values('BLOG02',N'Nên đọc sách vào thời gian nào?',N'Nhiều chuyên gia khẳng định rằng đọc sách vào buổi sáng là thời điểm tốt nhất để đọc. Chúng ta tỉnh táo và tập trung nhất vào buổi sáng, điều này giúp chúng ta lưu giữ thông tin mới tốt hơn. Nếu bạn khó ngủ vào ban đêm, đọc sách có thể giúp ích cho bạn.')
+insert into BLOG values('BLOG03',N'Tại sao phải đọc sách?',N'Một loạt các nghiên cứu khoa học đã chứng minh rằng đọc sách mang lại rất nhiều lợi ích cho sức khỏe tinh thần của bạn, đồng thời giúp bạn cải thiện bản thân một cách toàn diện.')
+insert into BLOG values('BLOG04',N'Nên đọc sách vào thời gian nào?',N'Nhiều chuyên gia khẳng định rằng đọc sách vào buổi sáng là thời điểm tốt nhất để đọc. Chúng ta tỉnh táo và tập trung nhất vào buổi sáng, điều này giúp chúng ta lưu giữ thông tin mới tốt hơn. Nếu bạn khó ngủ vào ban đêm, đọc sách có thể giúp ích cho bạn.')
+go

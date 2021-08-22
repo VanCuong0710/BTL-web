@@ -1,4 +1,4 @@
-﻿namespace SachOnline.Models
+namespace SachOnline.Models
 {
     using System;
     using System.Collections.Generic;
@@ -19,7 +19,7 @@
         [Key]
         [StringLength(10)]
         [DisplayName("SĐT: ")]
-        [Required(ErrorMessage = "Trường này không được để trống")]
+        [Required(ErrorMessage ="Trường này không được để trống")]
         public string SDT { get; set; }
 
         [DisplayName("Tên: ")]
