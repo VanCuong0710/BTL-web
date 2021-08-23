@@ -59,7 +59,7 @@ The above copyright notice and this permission notice shall be included in all c
                     @if (HttpContext.Current.Session["Quyen"] == null)
                     {
                 <li class="nav-item active  ">
-                    <a class="nav-link" href="./dashboard.html">
+                    <a class="nav-link" href="@Url.Action("Index","LoginAdmin")">
                         <i class="material-icons">dashboard</i>
                         <p>Đăng nhập</p>
                     </a>
@@ -99,19 +99,31 @@ The above copyright notice and this permission notice shall be included in all c
                                         </a>
                                     </li>
                                                         <li class="nav-item ">
-                                                            <a class="nav-link" href="#">
+                                                            <a class="nav-link" href="@Url.Action("Index","DanhMucSanPhamAdmins")">
                                                                 <i class="material-icons">content_paste</i>
                                                                 <p>Danh mục sản phẩm</p>
                                                             </a>
                                                         </li>
                                                                             <li class="nav-item ">
-                                                                                <a class="nav-link" href="@Url.Action("Logout","LoginAdmin")">
-                                                                                    <i class="material-icons">person</i>
-                                                                                    <p>Đăng xuất</p>
+                                                                                <a class="nav-link" href="@Url.Action("Index","NhaXuatBanAdmins")">
+                                                                                    <i class="material-icons">content_paste</i>
+                                                                                    <p>Nhà xuất bản</p>
                                                                                 </a>
-                                                                            </li>}
+                                                                            </li>
+                                                                                                <li class="nav-item ">
+                                                                                                    <a class="nav-link" href="@Url.Action("Index","SanPhamAdmins")">
+                                                                                                        <i class="material-icons">content_paste</i>
+                                                                                                        <p>Sản phẩm</p>
+                                                                                                    </a>
+                                                                                                </li>
+                                                                                                                    <li class="nav-item ">
+                                                                                                                        <a class="nav-link" href="@Url.Action("Logout","LoginAdmin")">
+                                                                                                                            <i class="material-icons">person</i>
+                                                                                                                            <p>Đăng xuất</p>
+                                                                                                                        </a>
+                                                                                                                    </li>}
 
-                                                                                        }
+                                                                                                                                }
 
 
 
