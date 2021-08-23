@@ -139,6 +139,7 @@
     <Compile Include="Areas\Admin\Controllers\AccountAdminsController.cs" />
     <Compile Include="Areas\Admin\Controllers\BLOGsController.cs" />
     <Compile Include="Areas\Admin\Controllers\DanhMucSanPhamAdminsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DonHangAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\NhaXuatBanAdminsController.cs" />
     <Compile Include="Areas\Admin\Controllers\SanPhamAdminsController.cs" />
@@ -504,6 +505,8 @@
     <Content Include="Areas\Admin\Views\SanPhamAdmins\Details.cshtml" />
     <Content Include="Areas\Admin\Views\SanPhamAdmins\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\SanPhamAdmins\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\DonHangAdmin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\DonHangAdmin\XemChiTietDonHang.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
