@@ -99,16 +99,17 @@
                     </form>
                 </div>
             }
-            <div class="col-md-4">
-                @if (HttpContext.Current.Session["SDT"] == null)
-                {
-                    <div id="cart"><a class="btn btn-1" href="@Url.Action("Index","Login")"><span class="glyphicon glyphicon-shopping-cart"></span>CART </a></div>
-                }
-                else
-                {
-                    <div id="cart"><a class="btn btn-1" href="@Url.Action("XemGioHang","ShoppingCart")"><span class="glyphicon glyphicon-shopping-cart"></span>CART </a></div>
-                }
-            </div>
+        <div class="col-md-4">
+            @if (HttpContext.Current.Session["SDT"] == null)
+            {
+                <div id="cart"><a class="btn btn-1" href="@Url.Action("Index","Login")"><span class="glyphicon glyphicon-shopping-cart"></span>CART </a></div>
+
+            }
+            else
+            {
+                <div id="cart"><a class="btn btn-1" href="@Url.Action("XemGioHang","ShoppingCart")"><span class="glyphicon glyphicon-shopping-cart"></span>CART </a></div>
+            }
+        </div>
         </div>
     </header>
     <!--Navigation-->
@@ -121,10 +122,23 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="@Url.Action("Home","SanPhams")">Trang Chủ</a></li>
-                    <li><a href="@Url.Action("Index","SanPhams")">Sản phẩm</a></li>
+                    <li><a href="@Url.Action("Index","SanPhams")">Sản Phẩm</a></li>
                     @Html.Partial("_DanhMucSanPham", SachOnline.Buss.DanhMucSanPhamBus.DanhSach())
                     @Html.Partial("_NhaXuatBan", SachOnline.Buss.NhaXuatBanBus.DanhSach())
-                    <li><a href="@Url.Action("Index","BlogKH")">Xem BLOG</a></li>
+                    <li><a href="@Url.Action("Index","BlogKH")">Xem Blog</a></li>
+                    @if (HttpContext.Current.Session["SDT"] == null)
+                    {
+
+
+
+
+
+                    }
+                    else
+                    {
+                        <li><a href="@Url.Action("XemDonHang","DatHang")">Xem Đơn hàng</a></li>
+                    }
+                </ul>
                 </ul>
             </div>
         </div>

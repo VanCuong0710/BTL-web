@@ -38,7 +38,7 @@
 
 <body>
     <br />
-    <h1 style="color:red" align="Center">Giỏ hàng của bạn</h1>
+    <h1 style="color:red" align="Center">Giỏ hàng hàng của: @Session["SDT"].ToString()</h1>
     <br />
     <table id="customers" align="center">
         <tr>
@@ -79,12 +79,18 @@
 
 
     </table>
+    <h2 align="right" style="color:red;">Tổng tiền: @tongtien</h2>
     @if (count == 0)
     {
-        <h1 align="center">Không có sản phẩm nào</h1>
+<div style="margin-top:200px;margin-bottom:200px;width:100%;"><h1 style="color:red;text-align:center;">Không có sản phẩm nào</h1></div>
+    }
+    else
+    {
+        <br />
+        <div align="center"><a class="btn btn-success" style="font-size:30px;" href="@Url.Action("Index","DatHang")">Đặt hàng</a></div>
     }
     <br />
-    <h2 align="right" style="color:red;">Tổng tiền: @tongtien</h2>
+
 </body>
 <div align="center">
     Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount

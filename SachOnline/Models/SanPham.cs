@@ -12,6 +12,7 @@ namespace SachOnline.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SanPham()
         {
+            ChiTietHoaDons = new HashSet<ChiTietHoaDon>();
             GioHangs = new HashSet<GioHang>();
         }
 
@@ -37,6 +38,9 @@ namespace SachOnline.Models
         [Required]
         [StringLength(50)]
         public string MaNXB { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ChiTietHoaDon> ChiTietHoaDons { get; set; }
 
         public virtual DanhMucSanPham DanhMucSanPham { get; set; }
 

@@ -77,20 +77,45 @@ go
 Create table [BLOG]
 (
 	[MaBlog] Nvarchar(50) NOT NULL,
-	[TenBlog] NText NULL,
-	[NoiDungBlog] NText NULL,
+	[TenBlog] Ntext NULL,
+	[NoiDungBlog] Ntext NULL,
 Constraint [pk_BLOG] Primary Key ([MaBlog])
+) 
+go
+
+Create table [HoaDon]
+(
+	[MAHD] Integer identity(1,1) NOT NULL,
+	[NgayTao] Datetime NULL,
+	[TinhTrang] Nvarchar(50) NULL,
+	[SDT] Nvarchar(10) NOT NULL,
+Constraint [pk_HoaDon] Primary Key ([MAHD])
+) 
+go
+
+Create table [ChiTietHoaDon]
+(
+	[MAHD] Integer NOT NULL,
+	[MaSP] Nvarchar(50) NOT NULL,
+	[SoLuong] Integer NOT NULL,
+Constraint [pk_ChiTietHoaDon] Primary Key ([MAHD],[MaSP])
 ) 
 go
 
 
 Alter table [GioHang] add  foreign key([MaSP]) references [SanPham] ([MaSP])  on update no action on delete no action 
 go
+Alter table [ChiTietHoaDon] add  foreign key([MaSP]) references [SanPham] ([MaSP])  on update no action on delete no action 
+go
 Alter table [SanPham] add  foreign key([MaDanhMuc]) references [DanhMucSanPham] ([MaDanhMuc])  on update no action on delete no action 
 go
 Alter table [SanPham] add  foreign key([MaNXB]) references [NhaXuatBan] ([MaNXB])  on update no action on delete no action 
 go
 Alter table [GioHang] add  foreign key([SDT]) references [KhachHang] ([SDT])  on update no action on delete no action 
+go
+Alter table [HoaDon] add  foreign key([SDT]) references [KhachHang] ([SDT])  on update no action on delete no action 
+go
+Alter table [ChiTietHoaDon] add  foreign key([MAHD]) references [HoaDon] ([MAHD])  on update no action on delete no action 
 go
 
 
@@ -102,6 +127,10 @@ Set quoted_identifier off
 go
 
 
+/* Roles permissions */
+
+
+/* Users permissions */
 
 insert into DanhMucSanPham values('DM01',N'Sach Thiếu Nhi')
 insert into DanhMucSanPham values('DM02',N'Sách Giáo Khoa')

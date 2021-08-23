@@ -2,7 +2,6 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
@@ -14,35 +13,41 @@
         public KhachHang()
         {
             GioHangs = new HashSet<GioHang>();
+            HoaDons = new HashSet<HoaDon>();
         }
 
         [Key]
         [StringLength(10)]
-        [DisplayName("SĐT: ")]
+        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$",
+                   ErrorMessage = "Bạn nhập không đúng định dạng. Phải có 10 số và là chữ số!")]
         [Required(ErrorMessage = "Trường này không được để trống")]
         public string SDT { get; set; }
 
-        [DisplayName("Tên: ")]
         [StringLength(50)]
         [Required(ErrorMessage = "Trường này không được để trống")]
         public string TenKH { get; set; }
 
-        [DisplayName("Email: ")]
         [StringLength(50)]
+        [RegularExpression(@"^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$",
+                   ErrorMessage = "Chứa các ký tự chữ cái, chữ số, dấu chấm, gạch dưới.Ký tự @. Nhóm ký tự trước @ có 6 - 32 ký tự.Nhóm ký tự sau @ là domain một hoặc nhiều cấp")]
         [Required(ErrorMessage = "Trường này không được để trống")]
         public string Email { get; set; }
+        
 
-        [DisplayName("Mật khẩu: ")]
-        [StringLength(50)]
+       [StringLength(50)]
         [Required(ErrorMessage = "Trường này không được để trống")]
+        [RegularExpression(@"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$",
+                   ErrorMessage = "Tối thiểu tám ký tự, ít nhất một chữ cái và một số!")]
         public string MatKhau { get; set; }
 
-        [DisplayName("Địa chỉ: ")]
         [StringLength(50)]
         [Required(ErrorMessage = "Trường này không được để trống")]
         public string DiaChi { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GioHang> GioHangs { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HoaDon> HoaDons { get; set; }
     }
 }

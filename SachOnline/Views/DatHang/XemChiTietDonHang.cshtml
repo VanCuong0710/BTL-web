@@ -1,4 +1,4 @@
-﻿@model PagedList.IPagedList<SachOnline.Models.GioHang>
+﻿@model PagedList.IPagedList<SachOnline.Models.ChiTietHoaDon>
 @using PagedList.Mvc;
 
 <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
@@ -38,7 +38,7 @@
 
 <body>
     <br />
-    <h1 style="color:red" align="Center">Giỏ hàng của bạn</h1>
+    <h1 style="color:red" align="Center">Chi tiết hóa đơn: @Session["DonHang"].ToString()</h1>
     <br />
     <table id="customers" align="center">
         <tr>
@@ -47,7 +47,6 @@
             <th>Giá</th>
             <th>Số lượng</th>
             <th>Thành tiền</th>
-            <th colspan="2">Bạn muốn</th>
         </tr>
         @{
             var tongtien = 0;
@@ -72,8 +71,6 @@
                         <span>@z</span>
                     }
                 </td>
-                <td align="center"><a href="@Url.Action("AddToCart","ShoppingCart",new { id=item.MaSP})"><img style="width:40px;height:40px;" src="~/Assets/images/add.png" /></a></td>
-                <td align="center"><a href="@Url.Action("xoaspfromcart","ShoppingCart",new { id=item.MaSP})"><img style="width:40px;height:40px;" src="~/Assets/images/delete.png" /></a></td>
             </tr>
         }
 
@@ -86,14 +83,13 @@
     }
     else
     {
-        <br />
-        <div align="center"><a class="btn btn-success" style="font-size:30px;" href="@Url.Action("Index","DatHang")">Đặt hàng</a></div>
+
     }
     <br />
 
 </body>
 <div align="center">
     Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
-    @Html.PagedListPager(Model, page => Url.Action("xoaspfromcart", new { page }))
+    @Html.PagedListPager(Model, page => Url.Action("XemChiTietDonHang", new { page }))
 </div>
 

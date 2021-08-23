@@ -148,6 +148,7 @@
     <Compile Include="Buss\SanPhamBus.cs" />
     <Compile Include="Controllers\BlogKHController.cs" />
     <Compile Include="Controllers\DanhMucSanPhamsController.cs" />
+    <Compile Include="Controllers\DatHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KhachHangsController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -159,9 +160,11 @@
     </Compile>
     <Compile Include="Models\AccountAdmin.cs" />
     <Compile Include="Models\BLOG.cs" />
+    <Compile Include="Models\ChiTietHoaDon.cs" />
     <Compile Include="Models\DanhMucSanPham.cs" />
     <Compile Include="Models\DataBase.cs" />
     <Compile Include="Models\GioHang.cs" />
+    <Compile Include="Models\HoaDon.cs" />
     <Compile Include="Models\KhachHang.cs" />
     <Compile Include="Models\NhaXuatBan.cs" />
     <Compile Include="Models\SanPham.cs" />
@@ -559,6 +562,9 @@
     <Content Include="Views\KhachHangs\Index.cshtml" />
     <Content Include="Views\SanPhams\Home.cshtml" />
     <Content Include="Views\BlogKH\Index.cshtml" />
+    <Content Include="Views\DatHang\Index.cshtml" />
+    <Content Include="Views\DatHang\XemDonHang.cshtml" />
+    <Content Include="Views\DatHang\XemChiTietDonHang.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
