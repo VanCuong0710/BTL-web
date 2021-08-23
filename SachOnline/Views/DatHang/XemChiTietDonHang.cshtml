@@ -38,8 +38,13 @@
 
 <body>
     <br />
-    <h1 style="color:red" align="Center">Chi tiết hóa đơn: @Session["DonHang"].ToString()</h1>
+    <h1 style="color:green">Thông tin hóa đơn: @Session["DonHang"].ToString()</h1>
     <br />
+    <span style="color:red">Tình trạng: @Session["TinhTrang"].ToString()</span>
+    <br />
+    <span style="color:red">Ngày tạo: @Session["NgayTao"].ToString()</span>
+    <br />
+    <h1 style="color: green" align="Center">Danh sách mặt hàng</h1>
     <table id="customers" align="center">
         <tr>
             <th>Hình ảnh</th>

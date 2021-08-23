@@ -78,6 +78,7 @@ namespace SachOnline.Controllers
             hd = hd.OrderBy(p => p.MaSP);
             hd = hd.Where(s => s.MAHD == id);
             Session["DonHang"] = id;
+
             return View(hd.ToPagedList(page, pagesize));
         }
     }

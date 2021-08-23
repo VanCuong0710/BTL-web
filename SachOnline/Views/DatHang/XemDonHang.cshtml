@@ -50,14 +50,20 @@
         }
         @foreach (var item in Model)
         {
-            count = count + 1;
+            { 
+                Session["TinhTrang"] = item.TinhTrang;
+                Session["NgayTao"] = item.NgayTao;
+ 
+
+            }
+                count = count + 1;
             <tr>
                 <td>@item.MAHD</td>
                 <td>@item.NgayTao</td>
                 <td>@item.TinhTrang</td>
                 <td align="center">
                     <a class="btn btn-info" href="@Url.Action("XemChiTietDonHang","DatHang",new { id=item.MAHD})">Xem chi tiết hóa đơn</a>
-   
+                    
                 </td>
             </tr>
         }
