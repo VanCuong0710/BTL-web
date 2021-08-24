@@ -568,6 +568,7 @@
     <Content Include="Views\DatHang\Index.cshtml" />
     <Content Include="Views\DatHang\XemDonHang.cshtml" />
     <Content Include="Views\DatHang\XemChiTietDonHang.cshtml" />
+    <Content Include="Views\ShoppingCart\Minus.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

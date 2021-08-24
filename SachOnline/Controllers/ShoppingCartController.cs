@@ -58,15 +58,42 @@ namespace SachOnline.Controllers
             sp = sp.Where(s => s.SDT == sdt);
             return View(sp.ToPagedList(page, pagesize));
         }
-        
+        public ActionResult Minus(string id, int page = 1, int pagesize = 10)
+        {
+            DataBase mydb = new DataBase();
+            string sdt = Session["SDT"].ToString();
+            tru(id, sdt);
+            var sp = mydb.GioHangs.Select(p => p);
+            sp = sp.OrderBy(p => p.SanPham.TenSP);
+            sp = sp.Where(s => s.SDT == sdt);
+            return View(sp.ToPagedList(page, pagesize));
+        }
+
         public ActionResult XemGioHang(int page = 1, int pagesize = 10)
         {
             DataBase mydb = new DataBase();
             string sdt = Session["SDT"].ToString();
             var sp = mydb.GioHangs.Select(p => p);
             sp = sp.OrderBy(p => p.SanPham.TenSP);
-            sp = sp.Where(s => s.SDT==sdt);  
+            sp = sp.Where(s => s.SDT == sdt);
             return View(sp.ToPagedList(page, pagesize));
+        }
+        public void tru(String id, string sdt)
+        {
+            DataBase mydb = new DataBase();
+            var check = mydb.GioHangs.FirstOrDefault(s => s.MaSP == id && s.SDT == sdt);
+
+            int soluong = (int)check.SoLuong;
+            check.SoLuong = soluong - 1;
+
+
+
+            if (check.SoLuong == 0)
+            {
+                mydb.GioHangs.Remove(check);
+            }
+            mydb.SaveChanges();
+
         }
     }
 }
