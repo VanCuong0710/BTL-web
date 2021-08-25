@@ -99,24 +99,24 @@
                     </form>
                 </div>
             }
-        <div class="col-md-4">
-            @if (HttpContext.Current.Session["SDT"] == null)
-            {
-                <div id="cart"><a class="btn btn-1" href="@Url.Action("Index","Login")"><span class="glyphicon glyphicon-shopping-cart"></span>CART </a></div>
+            <div class="col-md-4">
+                @if (HttpContext.Current.Session["SDT"] == null)
+                {
+                    <div id="cart"><a class="btn btn-1" href="@Url.Action("Index","Login")"><span class="glyphicon glyphicon-shopping-cart"></span>CART </a></div>
 
-            }
-            else
-            {
-                <div id="cart"><a class="btn btn-1" href="@Url.Action("XemGioHang","ShoppingCart")"><span class="glyphicon glyphicon-shopping-cart"></span>CART </a></div>
-            }
-        </div>
+                }
+                else
+                {
+                    <div id="cart"><a class="btn btn-1" href="@Url.Action("XemGioHang","ShoppingCart")"><span class="glyphicon glyphicon-shopping-cart"></span>CART </a></div>
+                }
+            </div>
         </div>
     </header>
     <!--Navigation-->
     <nav id="menu" class="navbar">
         <div class="container">
-          
-            <div class="collapse navbar-collapse navbar-ex1-collapse"">
+
+            <div class="collapse navbar-collapse navbar-ex1-collapse" ">
                 <ul class="nav navbar-nav">
                     <li><a href="@Url.Action("Home","SanPhams")">Trang Chủ</a></li>
                     <li><a href="@Url.Action("Index","SanPhams")">Sản Phẩm</a></li>
@@ -145,16 +145,19 @@
     <!--///////////////////Category Page//////////////////-->
     <!--//////////////////////////////////////////////////-->
     @RenderBody()
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
     <footer>
         <div class="container">
             <div class="wrap-footer">
                 <div class="row">
                     <div class="col-md-3 col-footer footer-1">
-                        <a href="#" style="text-decoration:none",   >
+                        <a href="#" style="text-decoration:none" ,>
                             <h2 style="color:white; margin-top:-5px;margin-bottom:5px;">NAVIBOOKS</h2>
                         </a>
-                        
-                        
+
+
                         <p>
                             Nhóm 3<br />
                             Nguyễn Mạnh Cường<br />
@@ -176,7 +179,7 @@
                             <li><a href="#">Sửa thông tin</a></li>
                             <li><a href="#">Đăng nhập</a></li>
                             <li><a href="#">Đăng xuất</a></li>
-                           
+
                         </ul>
                     </div>
                     <div class="col-md-3 col-footer footer-4">
@@ -194,12 +197,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                       
+
                     </div>
                     <div class="col-md-6">
                         <div class="pull-right">
                             <ul>
-                                <li><img src="~/Assets/images//visa-curved-32px.png" style="width:10px; height:15px;"/></li>
+                                <li><img src="~/Assets/images//visa-curved-32px.png" style="width:10px; height:15px;" /></li>
                                 <li><img src="~/Assets/images//paypal-curved-32px.png" /></li>
                                 <li><img src="~/Assets/images//discover-curved-32px.png" /></li>
                                 <li><img src="~/Assets/images//maestro-curved-32px.png" /></li>

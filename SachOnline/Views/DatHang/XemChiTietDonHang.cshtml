@@ -38,13 +38,13 @@
 
 <body>
     <br />
-    <h1 style="color:green;">Thông tin hóa đơn: @Session["DonHang"].ToString()</h1>
+    <h3 style="color:green;">Thông tin hóa đơn: @Session["DonHang"].ToString()</h3>
     <br />
     <span style="color: red; font-size: 20px;">Tình trạng: @Session["TinhTrang"].ToString()</span>
     <br />
     <span style="color: red; font-size: 20px;">Ngày tạo: @Session["NgayTao"].ToString()</span>
     <br />
-    <h1 style="color: green" align="Center">Danh sách mặt hàng</h1>
+    <h3 style="color: green" align="Center">Danh sách mặt hàng</h3>
     <table id="customers" align="center">
         <tr>
             <th>Hình ảnh</th>
@@ -81,10 +81,10 @@
 
 
     </table>
-    <h2 align="right" style="color:red;">Tổng tiền: @tongtien</h2>
+    <h4 align="right" style="color:red;">Tổng tiền: @tongtien</h4>
     @if (count == 0)
     {
-        <div style="margin-top:200px;margin-bottom:200px;width:100%;"><h1 style="color:red;text-align:center;">Không có sản phẩm nào</h1></div>
+        <div style="margin-top:200px;margin-bottom:200px;width:100%;"><h4 style="color:red;text-align:center;">Không có sản phẩm nào</h4></div>
     }
     else
     {

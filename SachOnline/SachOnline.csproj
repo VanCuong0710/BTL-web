@@ -169,6 +169,7 @@
     <Compile Include="Models\KhachHang.cs" />
     <Compile Include="Models\NhaXuatBan.cs" />
     <Compile Include="Models\SanPham.cs" />
+    <Compile Include="Models\sysdiagram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -215,6 +216,7 @@
     <Content Include="Areas\AssetsAdmin\assets\js\plugins\nouislider.min.js" />
     <Content Include="Areas\AssetsAdmin\assets\js\plugins\perfect-scrollbar.jquery.min.js" />
     <Content Include="Areas\AssetsAdmin\assets\js\plugins\sweetalert2.js" />
+    <Content Include="Assets\css\Blog.css" />
     <Content Include="Assets\css\bootstrap.min.css" />
     <Content Include="Assets\css\NewRegister.css" />
     <Content Include="Assets\css\NewSignIn.css" />
@@ -224,7 +226,37 @@
     <Content Include="Assets\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Assets\fonts\font-slider.css" />
     <Content Include="Assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\images\1826395745_sachhayvekinhdoanh.png" />
+    <Content Include="Assets\images\627808644_tuoitredanggiabaonhieubanner.png" />
     <Content Include="Assets\images\add.png" />
+    <Content Include="Assets\images\a_1032997143_thanhadesvithancaiquandianguc.jpeg" />
+    <Content Include="Assets\images\a_1116820540_reviewsachphiasaunghicanx1.jpg" />
+    <Content Include="Assets\images\a_1119511780_y.jpg" />
+    <Content Include="Assets\images\a_1157152305_v3.jpg" />
+    <Content Include="Assets\images\a_1209442037_cauchuyenthanthoaivethanposeidonvithancuabienca.jpeg" />
+    <Content Include="Assets\images\a_1213523983_haibatdongsanmoitaucuckydatdocualangbongdathegioi2.jpg" />
+    <Content Include="Assets\images\a_1217259967_nhng_ng_dng_giup_bn_hc_ting_anh_hiu_qu.jpg" />
+    <Content Include="Assets\images\a_1319868549_thanthoaivevithantoicaozeus.jpeg" />
+    <Content Include="Assets\images\a_1324713278_trng_thanh_2.jpg" />
+    <Content Include="Assets\images\a_1390087460_vi_sao_nn_duy_tri_thoi_quen_c_sach_mi_ngay.jpg" />
+    <Content Include="Assets\images\a_1429863420_homnaytoidihoc.jpeg" />
+    <Content Include="Assets\images\a_1618859199_po0.jpg" />
+    <Content Include="Assets\images\a_1679704143_ynghiatruyencotichnangtienca1.jpg" />
+    <Content Include="Assets\images\a_182164058_tng_hp_nhng_cu_chuc_ng_ngon_d_thng_va_ngt_ngao_nht.jpg" />
+    <Content Include="Assets\images\a_188454024_bi_quyt_lam_vic_ti_nha_hiu_qu_gia_mua_dch_covid_19.png" />
+    <Content Include="Assets\images\a_1893206713_tich_cc.jpg" />
+    <Content Include="Assets\images\a_1916775110_nhng_li_chuc_mng_sinh_nht_hay_va_ngha_nht.jpg" />
+    <Content Include="Assets\images\a_1990080675_caunoihayvelongdungcam.jpg" />
+    <Content Include="Assets\images\a_2009239298_po01.jpg" />
+    <Content Include="Assets\images\a_348529955_cacvithantrongthanthoaihylap.jpeg" />
+    <Content Include="Assets\images\a_404847785_v2.jpg" />
+    <Content Include="Assets\images\a_424415020_cachhocgioimonvatly.jpg" />
+    <Content Include="Assets\images\a_533378178_truyencotichcongchungutrongrung.jpg" />
+    <Content Include="Assets\images\a_667704341_li_bing.jpg" />
+    <Content Include="Assets\images\a_670291969_caunoihaynhatvetinhyeu.jpg" />
+    <Content Include="Assets\images\a_926511353_truyencotichvietnamquabautien1.jpg" />
+    <Content Include="Assets\images\a_976222327_nhungcaunoihayvegiatribanthan.jpg" />
+    <Content Include="Assets\images\a_990645330_zz2.jpg" />
     <Content Include="Assets\images\close.png" />
     <Content Include="Assets\images\delete.png" />
     <Content Include="Assets\images\discover-curved-32px.png" />
