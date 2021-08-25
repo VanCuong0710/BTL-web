@@ -34,6 +34,7 @@ namespace SachOnline.Controllers
             var check = mydb.KhachHangs.Where(p => p.SDT.Equals(kh.SDT) && p.MatKhau.Equals(kh.MatKhau)).FirstOrDefault();
             if(check == null)
             {
+                
                 ViewBag.Error = "Đăng nhập không thành công";
                 return View("Index", kh);
             }    

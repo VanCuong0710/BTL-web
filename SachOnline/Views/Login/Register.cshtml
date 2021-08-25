@@ -133,15 +133,17 @@
                     Bạn đã có tài khoản?
                     <a class="btn btn-primary" style="text-decoration:none;" href="@Url.Action("Index","Login")">Đăng nhập ngay</a>
                     <br />
-                    @Html.ValidationMessageFor(m => m.TenKH)
-                    <br />
-                    @Html.ValidationMessageFor(m => m.SDT)
-                    <br />
-                    @Html.ValidationMessageFor(m => m.Email)
-                    <br />
-                    @Html.ValidationMessageFor(m => m.MatKhau)
-                    <br />
-                    @Html.ValidationMessageFor(m => m.DiaChi)
+                    <div style="color:red";>
+                        @Html.ValidationMessageFor(m => m.TenKH)
+                        <br />
+                        @Html.ValidationMessageFor(m => m.SDT)
+                        <br />
+                        @Html.ValidationMessageFor(m => m.Email)
+                        <br />
+                        @Html.ValidationMessageFor(m => m.MatKhau)
+                        <br />
+                        @Html.ValidationMessageFor(m => m.DiaChi)
+                    </div>
                     @if (ViewBag.Error != null)
                     {
                         <span class="field-validation-error">@ViewBag.Error</span>
