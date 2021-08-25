@@ -216,6 +216,8 @@
     <Content Include="Areas\AssetsAdmin\assets\js\plugins\perfect-scrollbar.jquery.min.js" />
     <Content Include="Areas\AssetsAdmin\assets\js\plugins\sweetalert2.js" />
     <Content Include="Assets\css\bootstrap.min.css" />
+    <Content Include="Assets\css\NewRegister.css" />
+    <Content Include="Assets\css\NewSignIn.css" />
     <Content Include="Assets\css\style.css" />
     <Content Include="Assets\font-awesome\css\font-awesome.css" />
     <Content Include="Assets\font-awesome\css\font-awesome.min.css" />
@@ -569,6 +571,8 @@
     <Content Include="Views\DatHang\XemDonHang.cshtml" />
     <Content Include="Views\DatHang\XemChiTietDonHang.cshtml" />
     <Content Include="Views\ShoppingCart\Minus.cshtml" />
+    <Content Include="Views\Login\NewRegister.cshtml" />
+    <Content Include="Views\Login\NewSignIn.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

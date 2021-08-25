@@ -39,6 +39,8 @@ namespace SachOnline.Areas.Admin.Controllers
         {
             DataBase mydb = new DataBase();
             var hd = mydb.ChiTietHoaDons.Select(p => p);
+            var check = mydb.HoaDons.Where(p => p.MAHD==id).FirstOrDefault();
+            Session["TinhTrang"] = check.TinhTrang;
             hd = hd.OrderBy(p => p.MaSP);
             hd = hd.Where(s => s.MAHD == id);
             Session["DonHang"] = id;
@@ -48,7 +50,6 @@ namespace SachOnline.Areas.Admin.Controllers
         {
             DataBase mydb = new DataBase();
             var check = mydb.HoaDons.FirstOrDefault(s => s.MAHD == id);
-            Session["TinhTrang"] = "Đã bị hủy";
             check.TinhTrang = "Đã bị hủy";
             mydb.SaveChanges();
             return RedirectToAction("Index","DonHangAdmin");
@@ -57,7 +58,6 @@ namespace SachOnline.Areas.Admin.Controllers
         {
             DataBase mydb = new DataBase();
             var check = mydb.HoaDons.FirstOrDefault(s => s.MAHD == id);
-            Session["TinhTrang"] = "Đã giao hàng";
             check.TinhTrang = "Đã giao hàng";
             mydb.SaveChanges();
             return RedirectToAction("Index", "DonHangAdmin");

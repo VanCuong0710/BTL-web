@@ -42,14 +42,14 @@ The above copyright notice and this permission notice shall be included in all c
             <div class="logo" style="text-align:center">
                 @if (HttpContext.Current.Session["Quyen"] == null)
                 {
-    <span>Bạn chưa đăng nhập</span> }
+                    <span>Bạn chưa đăng nhập</span> }
                 else
                 {
-    <span>
+                    <span>
 
-        Xin chào @Session["Quyen"]<br />
-        @Session["Ten"]
-    </span>}
+                        Xin chào @Session["Quyen"]<br />
+                        @Session["Ten"]
+                    </span>}
 
 
             </div>
@@ -58,84 +58,86 @@ The above copyright notice and this permission notice shall be included in all c
 
                     @if (HttpContext.Current.Session["Quyen"] == null)
                     {
-                <li class="nav-item active  ">
-                    <a class="nav-link" href="@Url.Action("Index","LoginAdmin")">
-                        <i class="material-icons">dashboard</i>
-                        <p>Đăng nhập</p>
-                    </a>
-                </li> }
-                            else
-                            {
-
-                                if (Session["Quyen"].ToString().Equals("NV"))
-                                {
-
-
-                <li class="nav-item ">
-                    <a class="nav-link" href="@Url.Action("Index","BLOGs")">
-                        <i class="material-icons">bubble_chart</i>
-                        <p>Danh sách Blogs</p>
-                    </a>
-                </li>
-                                    <li class="nav-item ">
-                                        <a class="nav-link" href="@Url.Action("Index","DonHangAdmin")">
-                                            <i class="material-icons">content_paste</i>
-                                            <p>Danh sách đơn hàng</p>
-                                        </a>
-                                    </li>
-                                                        <li class="nav-item ">
-                                                            <a class="nav-link" href="@Url.Action("Logout","LoginAdmin")">
-                                                                <i class="material-icons">person</i>
-                                                                <p>Đăng xuất</p>
-                                                            </a>
-                                                        </li>
+                        <li class="nav-item active  ">
+                            <a class="nav-link" href="@Url.Action("Index","LoginAdmin")">
+                                <i class="material-icons">dashboard</i>
+                                <p>Đăng nhập</p>
+                            </a>
+                        </li>
  }
-                                                    if (Session["Quyen"].ToString().Equals("ADMIN"))
-                                                    {
-                                    <li class="nav-item ">
-                                        <a class="nav-link" href="@Url.Action("Index","AccountAdmins")">
-                                            <i class="material-icons">person</i>
-                                            <p>Quản lý tài khoản</p>
-                                        </a>
-                                    </li>
-                                                        <li class="nav-item ">
-                                                            <a class="nav-link" href="@Url.Action("Index","BLOGS")">
-                                                                <i class="material-icons">bubble_chart</i>
-                                                                <p>BLOGS</p>
-                                                            </a>
-                                                        </li>
-                                                                            <li class="nav-item ">
-                                                                                <a class="nav-link" href="@Url.Action("Index","DanhMucSanPhamAdmins")">
-                                                                                    <i class="material-icons">library_books</i>
-                                                                                    <p>Danh mục sản phẩm</p>
-                                                                                </a>
-                                                                            </li>
-                                                                                                <li class="nav-item ">
-                                                                                                    <a class="nav-link" href="@Url.Action("Index","NhaXuatBanAdmins")">
-                                                                                                        <i class="material-icons">library_books</i>
-                                                                                                        <p>Nhà xuất bản</p>
-                                                                                                    </a>
-                                                                                                </li>
-                                                                                                                    <li class="nav-item ">
-                                                                                                                        <a class="nav-link" href="@Url.Action("Index","SanPhamAdmins")">
-                                                                                                                            <i class="material-icons">library_books</i>
-                                                                                                                            <p>Sản phẩm</p>
-                                                                                                                        </a>
-                                                                                                                    </li>
-                                                                                                                                        <li class="nav-item ">
-                                                                                                                                            <a class="nav-link" href="@Url.Action("Index","DonHangAdmin")">
-                                                                                                                                                <i class="material-icons">content_paste</i>
-                                                                                                                                                <p>Danh sách đơn hàng</p>
-                                                                                                                                            </a>
-                                                                                                                                        </li>
-                                                                                                                                                            <li class="nav-item ">
-                                                                                                                                                                <a class="nav-link" href="@Url.Action("Logout","LoginAdmin")">
-                                                                                                                                                                    <i class="material-icons">person</i>
-                                                                                                                                                                    <p>Đăng xuất</p>
-                                                                                                                                                                </a>
-                                                                                                                                                            </li>}
+                    else
+                    {
 
-                                                                                                                                                                        }
+                        if (Session["Quyen"].ToString().Equals("NV"))
+                        {
+
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="@Url.Action("Index","BLOGs")">
+                                    <i class="material-icons">bubble_chart</i>
+                                    <p>Danh sách Blogs</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="@Url.Action("Index","DonHangAdmin")">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>Danh sách đơn hàng</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="@Url.Action("Logout","LoginAdmin")">
+                                    <i class="material-icons">person</i>
+                                    <p>Đăng xuất</p>
+                                </a>
+                            </li>
+                        }
+                        if (Session["Quyen"].ToString().Equals("ADMIN"))
+                        {
+                            <li class="nav-item ">
+                                <a class="nav-link" href="@Url.Action("Index","AccountAdmins")">
+                                    <i class="material-icons">person</i>
+                                    <p>Quản lý tài khoản</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="@Url.Action("Index","BLOGS")">
+                                    <i class="material-icons">bubble_chart</i>
+                                    <p>BLOGS</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="@Url.Action("Index","DanhMucSanPhamAdmins")">
+                                    <i class="material-icons">library_books</i>
+                                    <p>Danh mục sản phẩm</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="@Url.Action("Index","NhaXuatBanAdmins")">
+                                    <i class="material-icons">library_books</i>
+                                    <p>Nhà xuất bản</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="@Url.Action("Index","SanPhamAdmins")">
+                                    <i class="material-icons">library_books</i>
+                                    <p>Sản phẩm</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="@Url.Action("Index","DonHangAdmin")">
+                                    <i class="material-icons">content_paste</i>
+                                    <p>Danh sách đơn hàng</p>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="@Url.Action("Logout","LoginAdmin")">
+                                    <i class="material-icons">person</i>
+                                    <p>Đăng xuất</p>
+                                </a>
+                            </li>
+}
+
+                    }
 
 
 

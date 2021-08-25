@@ -1,4 +1,7 @@
 ﻿
+body{
+   
+}
 .field-validation-error{
     color:red;
 }
@@ -10,10 +13,12 @@
     padding: 10px 10px;
 }
 table{
+    background-color:white;
     width:500px;
 
 }
 .title-form{
     text-align:center;
     font-size:30px;
+    color:aqua;
 }

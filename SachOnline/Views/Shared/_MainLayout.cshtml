@@ -45,13 +45,13 @@
             <div class="row">
                 <div class="col-xs-6">
                     <select class="language">
-                        <option value="English" selected>English</option>
-                        <option value="France">Việt Nam</option>
+                        <option value="English">English</option>
+                        <option value="VietNam" selected>Việt Nam</option>
                     </select>
                     <select class="currency">
-                        <option value="USD" selected>USD</option>
+                        <option value="USD">USD</option>
                         <option value="EUR">EUR</option>
-                        <option value="DDD">VNĐ</option>
+                        <option value="VND" selected>VNĐ</option>
                     </select>
                 </div>
                 <div class="col-xs-6">
@@ -94,7 +94,7 @@
             {
                 <div class="col-md-4">
                     <form class="form-search">
-                        <input type="text" name="seachString" class="input-medium search-query">
+                        <input type="text" name="seachString" class="input-medium search-query" placeholder="Nhập sách muốn tìm kiếm...">
                         <button type="submit" class="btn"><span class="glyphicon glyphicon-search"></span></button>
                     </form>
                 </div>
@@ -115,11 +115,8 @@
     <!--Navigation-->
     <nav id="menu" class="navbar">
         <div class="container">
-            <div class="navbar-header">
-                <span id="heading" class="visible-xs">Categories</span>
-                <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
-            </div>
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
+          
+            <div class="collapse navbar-collapse navbar-ex1-collapse"">
                 <ul class="nav navbar-nav">
                     <li><a href="@Url.Action("Home","SanPhams")">Trang Chủ</a></li>
                     <li><a href="@Url.Action("Index","SanPhams")">Sản Phẩm</a></li>
@@ -153,7 +150,11 @@
             <div class="wrap-footer">
                 <div class="row">
                     <div class="col-md-3 col-footer footer-1">
-                        <img src="~/Assets/images//logofooter.png" />
+                        <a href="#" style="text-decoration:none",   >
+                            <h2 style="color:white; margin-top:-5px;margin-bottom:5px;">NAVIBOOKS</h2>
+                        </a>
+                        
+                        
                         <p>
                             Nhóm 3<br />
                             Nguyễn Mạnh Cường<br />
@@ -193,12 +194,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        Lập trình ứng dụng <a href="#" rel="nofollow" target="_blank">cơ sở dữ liệu trên Web</a> Được hướng dẫn bởi Thầy: <a href="#" rel="nofollow" target="_blank">ĐỖ NGỌC SƠN </a>
+                       
                     </div>
                     <div class="col-md-6">
                         <div class="pull-right">
                             <ul>
-                                <li><img src="~/Assets/images//visa-curved-32px.png" /></li>
+                                <li><img src="~/Assets/images//visa-curved-32px.png" style="width:10px; height:15px;"/></li>
                                 <li><img src="~/Assets/images//paypal-curved-32px.png" /></li>
                                 <li><img src="~/Assets/images//discover-curved-32px.png" /></li>
                                 <li><img src="~/Assets/images//maestro-curved-32px.png" /></li>

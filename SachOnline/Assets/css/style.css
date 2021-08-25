@@ -16,8 +16,8 @@ html, body {width:100%; padding:0; margin:0;}
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------- */
-html { -webkit-text-size-adjust: none;}
-.video embed,.video object,.video iframe { width: 100%;  height: auto;}
+html {Â -webkit-text-size-adjust: none;}
+.video embed,.video object,.video iframe {Â width: 100%;Â Â height: auto;}
 img{max-width:100%;	height: auto;width: auto\9; /* ie8 */}
 
 h1 {font-size: 38px;}
@@ -27,7 +27,7 @@ h4 {font-size: 28px;}
 h5 {font-size: 24px;}
 h6 {font-size: 20px;}
 
-h1,h2,h3,h4,h5,h6 {font-family: 'Roboto', sans-serif;font-weight: 600;color: #111;}
+h1,h2,h3,h4,h5,h6 {font-family: Tahoma, sans-serif;font-weight: 600;color: #111;}
 
 p {margin: 0 0 20px;}
 
@@ -38,10 +38,10 @@ a {
    transition: all .2s ease-in-out;
    text-decoration: none;
 }
-a:hover,
+
 a:focus {text-decoration: none;}
 
-ul {padding: 0;margin: 0;}
+ul {padding: 0;margin:auto;}
 ul li {list-style:none;}
 
 select {border: 0;background: transparent;}
@@ -76,20 +76,32 @@ header .form-search button:hover {color: #eee;}
 	header #cart {float: none;}
 }
 
-#menu {background-color: #111;border-radius: 0;}
-#menu #heading {float: left;padding-left: 15px;font-size: 20px;font-weight: 700;line-height: 40px;color: #fff;margin-top: 10px;text-transform: uppercase;}
+#menu {border-radius: 0;}
+#menu #heading {padding-left: 15px;font-size: 20px;font-weight: 700;line-height: 20px;color: #fff;margin-top: 10px;text-transform: uppercase;}
 #menu .dropdown-menu {background-color: #111;}
 #menu .dropdown-menu li > a:hover {color: #ffffff;background-color: #3f3f3f;}
-#menu .dropdown-inner {display: table;}
+#menu .dropdown-inner {display: flex; justify-content:center; width:auto}
 #menu .dropdown-inner ul {display: table-cell;}
-#menu .dropdown-inner a {min-width: 160px;display: block;padding: 3px 20px;clear: both;line-height: 20px;color: #333333;font-size: 12px;}
+#menu .dropdown-inner a {min-width: 160px;display: block;padding: 3px 20px;clear: both;line-height: 20px;color: #333333;font-size: 14px; text-decoration:none}
 #menu li.dropdown:hover>a, #menu li.dropdown:focus>a, #menu li.dropdown:active>a{background: #272727;}
-#menu ul.nav li a{color: #fff;padding: 20px ;text-transform: uppercase;}
+	#menu ul li{
+		justify-content: center;
+		
+	}
+	#menu ul.nav {
+		
+		background: #111;
+	
+	}
+#menu ul.nav li a{color: #fff;padding: 20px ;text-transform: uppercase; text-align:center}
 #menu ul.nav li a:hover{background-color: #3f3f3f;}
-#menu .btn-navbar {font-size: 20px;color: #FFF;padding: 5px 15px;float: right;border: 3px solid #fff;}
+#menu .btn-navbar {font-size: 20px;color: #FFF;padding: 5px 15px;border: 3px solid #fff;}
+
 
 @media (min-width: 768px) {
-	#menu .dropdown:hover .dropdown-menu {display: block;}
+	#menu .dropdown:hover .dropdown-menu {display: block;
+
+	}
 }
 @media(max-width:767px) {
 	#menu .navbar-brand {display: block;color: #fff;}
@@ -98,8 +110,11 @@ header .form-search button:hover {color: #eee;}
 	#menu div.dropdown-inner > ul.list-unstyled {display: block;}
 	#menu .dropdown-inner a {width: 100%;color: #fff;}
 	#menu div.dropdown-menu {margin-left: 0 !important;	padding-bottom: 10px;background-color: rgba(0, 0, 0, 0.1);}
-	#menu .dropdown-menu a:hover,
+
 	#menu .dropdown-menu ul li a:hover {background: rgba(0, 0, 0, 0.1);}
+}
+.row .banner image{
+	height:300px;
 }
 /* ---------------------------------------------------------------------------- */
 /* -----------------------------------Content---------------------------------- */
@@ -131,8 +146,8 @@ header .form-search button:hover {color: #eee;}
 .product:after, .product:before{clear: both; content: '\0020'; display: block; visibility: hidden; width: 0; height: 0;}
 .product .image-more {margin-top: 15px;}
 .product .image-more img{border: 1px solid #DDD;max-height: 85px;margin-bottom: 10px;}
-.product .buttons {margin: 10px 0;}
-.product .buttons a {background-color: #eee;}
+.product .buttons {margin: 10px 0; display:flex; justify-content:center }
+.product .buttons a {background-color: #eee;padding: 17px; }
 .product .name {border-bottom: 1px solid #eee;}
 .product .name h3{font-weight: 500;font-size: 20px;color: #666;margin-top: 10px;}
 .product .info ul li{margin: 10px 0;}
@@ -151,9 +166,10 @@ header .form-search button:hover {color: #eee;}
 .pricedetails {margin-top: 20px;}
 .pricedetails table td {padding-right: 70px;}
 
-
 /* IMG thumb - product.html */
-.modal-body {padding:5px !important;}
+.modal-body {
+	padding: 5px !important;
+}
 .modal-content {border-radius:0;}.modal-dialog img {text-align:center;margin:0 auto;}
 .controls{width:50px;display:block;font-size:19px;font-weight:500;}
 .next {float:right;text-align:right;}

@@ -14,6 +14,19 @@ namespace SachOnline.Controllers
         {
             return View();
         }
+        public ActionResult NewRegister()
+        {
+            return View();
+        }
+        public ActionResult NewSignIn()
+        {
+            return View();
+        }
+        [HttpGet]
+        public ActionResult Register()
+        {
+            return View();
+        }
         [HttpPost]
         public ActionResult Authen(KhachHang kh)
         {
@@ -31,11 +44,7 @@ namespace SachOnline.Controllers
             }    
         }
    
-        [HttpGet]
-        public ActionResult Register()
-        {
-            return View();
-        }
+   
         // METHOD dùng để xử lý model 
         [HttpPost]
         public ActionResult Register(KhachHang kh)
@@ -49,6 +58,7 @@ namespace SachOnline.Controllers
                     mydb.Configuration.ValidateOnSaveEnabled = false;
                     mydb.KhachHangs.Add(kh);
                     mydb.SaveChanges();
+                    Session["Kiemtra"] = 1;
                     return RedirectToAction("Index");
                 }    
                 else
