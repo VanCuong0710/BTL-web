@@ -41,6 +41,7 @@ namespace SachOnline.Areas.Admin.Controllers
             var hd = mydb.ChiTietHoaDons.Select(p => p);
             var check = mydb.HoaDons.Where(p => p.MAHD==id).FirstOrDefault();
             Session["TinhTrang"] = check.TinhTrang;
+            Session["NgayTao"] = check.NgayTao;
             hd = hd.OrderBy(p => p.MaSP);
             hd = hd.Where(s => s.MAHD == id);
             Session["DonHang"] = id;

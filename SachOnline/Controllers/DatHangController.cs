@@ -78,7 +78,9 @@ namespace SachOnline.Controllers
             hd = hd.OrderBy(p => p.MaSP);
             hd = hd.Where(s => s.MAHD == id);
             Session["DonHang"] = id;
-
+            var check = mydb.HoaDons.Where(p => p.MAHD == id).FirstOrDefault();
+            Session["TinhTrang"] = check.TinhTrang;
+            Session["NgayTao"] = check.NgayTao;
             return View(hd.ToPagedList(page, pagesize));
         }
 
