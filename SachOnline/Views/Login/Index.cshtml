@@ -1,4 +1,5 @@
 ﻿@model SachOnline.Models.KhachHang
+@using CaptchaMvc.HtmlHelpers;
 @{
     Layout = null;
 }
@@ -18,30 +19,30 @@
 
 <body>
     <div id="login-box">
-        @using (Html.BeginForm("Authen", "Login", FormMethod.Post))
+        @using (Html.BeginForm("Authen", "Login", FormMethod.Post, htmlAttributes: new { @enctype = "multipart/form-data", @id = "fromCapcha" }))
         {
             @Html.AntiForgeryToken()
-        <div class="left">
-            <h1>Đăng nhập</h1>
-            @if (HttpContext.Current.Session["Kiemtra"] == null)
-            {
+            <div class="left">
+                <h1>Đăng nhập</h1>
+                @if (HttpContext.Current.Session["Kiemtra"] == null)
+                {
 
-            }
-            else
-            {
-                <span style="text-align:center;color:green;">Đăng ký thành công<br /></span>
-            }
-            <span>Nhập vào số điện thoại:</span>
-            @Html.TextBoxFor(m => m.SDT)
-            <span>Nhập vào mật khẩu:</span>
-            @Html.PasswordFor(m => m.MatKhau)
-
-
-            <div class="nut">
-                <input type="submit" value="Đăng nhập" />
-                <input type="reset" value="Loại bỏ" />
+                }
+                else
+                {
+                    <span style="text-align:center;color:green;">Đăng ký thành công<br /></span>
+                }
+                <span>Nhập vào số điện thoại:</span>
+                @Html.TextBoxFor(m => m.SDT)
+                <span>Nhập vào mật khẩu:</span>
+                @Html.PasswordFor(m => m.MatKhau)
+                @Html.MathCaptcha()
+               <p style="color:red;">@ViewBag.ErrorMsg</p>
+                <div class="nut">
+                    <input type="submit" value="Đăng nhập" />
+                    <input type="reset" value="Loại bỏ" />
+                </div>
             </div>
-        </div>
 
             <div class="right">
                 <span class="loginwith">Đăng nhập với</span>
@@ -62,7 +63,7 @@
             </div>
 
         }
-       <div class="or">OR</div>
+        <div class="or">OR</div>
     </div>
 </body>
 </html>

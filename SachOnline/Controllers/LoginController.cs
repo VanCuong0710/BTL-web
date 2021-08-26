@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using CaptchaMvc.HtmlHelpers;
 namespace SachOnline.Controllers
 {
     public class LoginController : Controller
@@ -14,14 +14,8 @@ namespace SachOnline.Controllers
         {
             return View();
         }
-        public ActionResult NewRegister()
-        {
-            return View();
-        }
-        public ActionResult NewSignIn()
-        {
-            return View();
-        }
+     
+        
         [HttpGet]
         public ActionResult Register()
         {
@@ -31,11 +25,16 @@ namespace SachOnline.Controllers
         public ActionResult Authen(KhachHang kh)
         {
             DataBase mydb = new DataBase();
+            if(!this.IsCaptchaValid(errorText:""))
+            {
+                @ViewBag.ErrorMsg = "Capcha is not valid";
+                return View("Index", kh);
+            }    
             var check = mydb.KhachHangs.Where(p => p.SDT.Equals(kh.SDT) && p.MatKhau.Equals(kh.MatKhau)).FirstOrDefault();
             if(check == null)
             {
                 
-                ViewBag.Error = "Đăng nhập không thành công";
+                ViewBag.Error = "Tài khoản mật khẩu không đúng";
                 return View("Index", kh);
             }    
             else
@@ -51,6 +50,11 @@ namespace SachOnline.Controllers
         public ActionResult Register(KhachHang kh)
         {
             DataBase mydb = new DataBase();
+            if (!this.IsCaptchaValid(errorText: ""))
+            {
+                @ViewBag.ErrorMsg = "Capcha is not valid";
+                return View();
+            }
             if (ModelState.IsValid)
             {
                 var check = mydb.KhachHangs.FirstOrDefault(s => s.SDT == kh.SDT);

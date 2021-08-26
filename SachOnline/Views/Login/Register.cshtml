@@ -1,4 +1,5 @@
 ﻿@model SachOnline.Models.KhachHang
+@using CaptchaMvc.HtmlHelpers;
 @{
     Layout = null;
 }
@@ -17,87 +18,87 @@
 @*<body>
 
 
-    <div>
-        <div id="form-register" style="left:520px; font-size:25px;">
-            @using (Html.BeginForm("Register", "Login", FormMethod.Post))
-            {
-                @Html.AntiForgeryToken()
-                <table>
-                    <tr>
-                        <th colspan="2" class="title-form">Đăng ký</th>
-                    </tr>
+        <div>
+            <div id="form-register" style="left:520px; font-size:25px;">
+                @using (Html.BeginForm("Register", "Login", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    <table>
+                        <tr>
+                            <th colspan="2" class="title-form">Đăng ký</th>
+                        </tr>
 
 
-                    <tr>
-                        <td>Tên của bạn</td>
-                        <td>@Html.TextBoxFor(m => m.TenKH)</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">@Html.ValidationMessageFor(m => m.TenKH)</td>
-                    </tr>
-                    <tr>
-                        <td>Số điện thoại</td>
-                        <td>@Html.TextBoxFor(m => m.SDT)</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">@Html.ValidationMessageFor(m => m.SDT)</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            @if (ViewBag.Error != null)
-                            {
-                                <span class="field-validation-error">@ViewBag.Error</span>
-                            }
-                        </td>
-                    </tr>
+                        <tr>
+                            <td>Tên của bạn</td>
+                            <td>@Html.TextBoxFor(m => m.TenKH)</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">@Html.ValidationMessageFor(m => m.TenKH)</td>
+                        </tr>
+                        <tr>
+                            <td>Số điện thoại</td>
+                            <td>@Html.TextBoxFor(m => m.SDT)</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">@Html.ValidationMessageFor(m => m.SDT)</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                @if (ViewBag.Error != null)
+                                {
+                                    <span class="field-validation-error">@ViewBag.Error</span>
+                                }
+                            </td>
+                        </tr>
 
-                    <tr>
-                        <td>Nhập email</td>
-                        <td>@Html.TextBoxFor(m => m.Email)</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">@Html.ValidationMessageFor(m => m.Email)</td>
-                    </tr>
+                        <tr>
+                            <td>Nhập email</td>
+                            <td>@Html.TextBoxFor(m => m.Email)</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">@Html.ValidationMessageFor(m => m.Email)</td>
+                        </tr>
 
-                    <tr>
-                        <td>Nhập mật khẩu</td>
-                        <td>@Html.PasswordFor(m => m.MatKhau)</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">@Html.ValidationMessageFor(m => m.MatKhau)</td>
-                    </tr>
+                        <tr>
+                            <td>Nhập mật khẩu</td>
+                            <td>@Html.PasswordFor(m => m.MatKhau)</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">@Html.ValidationMessageFor(m => m.MatKhau)</td>
+                        </tr>
 
-                    <tr>
-                        <td>Địa chỉ</td>
-                        <td>@Html.TextBoxFor(m => m.DiaChi)</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">@Html.ValidationMessageFor(m => m.DiaChi)</td>
-                    </tr>
-                    <tr>
-                        <td>
-                        </td>
-                        <td>
-                            <input type="submit" value="Đăng ký" />
-                            <input type="reset" value="Loại bỏ" />
+                        <tr>
+                            <td>Địa chỉ</td>
+                            <td>@Html.TextBoxFor(m => m.DiaChi)</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">@Html.ValidationMessageFor(m => m.DiaChi)</td>
+                        </tr>
+                        <tr>
+                            <td>
+                            </td>
+                            <td>
+                                <input type="submit" value="Đăng ký" />
+                                <input type="reset" value="Loại bỏ" />
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="center" colspan="3"><a class="btn btn-primary" style="text-decoration:none;" href="@Url.Action("Index","Login")">Đăng nhập ngay</a></td>
-                    </tr>
-                    <tr>
-                        <td align="center" colspan="3"><a class="btn btn-primary" style="text-decoration:none;" href="@Url.Action("Index","SanPhams")">Trang chủ</a></td>
-                    </tr>
-                </table>
-            }
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" colspan="3"><a class="btn btn-primary" style="text-decoration:none;" href="@Url.Action("Index","Login")">Đăng nhập ngay</a></td>
+                        </tr>
+                        <tr>
+                            <td align="center" colspan="3"><a class="btn btn-primary" style="text-decoration:none;" href="@Url.Action("Index","SanPhams")">Trang chủ</a></td>
+                        </tr>
+                    </table>
+                }
+            </div>
         </div>
-    </div>
 
-</body>*@
+    </body>*@
 <body>
     <div id="login-box">
-        @using (Html.BeginForm("Register", "Login", FormMethod.Post))
+        @using (Html.BeginForm("Register", "Login", FormMethod.Post, htmlAttributes: new { @enctype = "multipart/form-data", @id = "fromCapcha" }))
         {
             @Html.AntiForgeryToken()
         <div class="left">
@@ -117,6 +118,8 @@
             <span>Nhập vào địa chỉ:</span>
             @Html.TextBoxFor(m => m.DiaChi)
 
+            @Html.MathCaptcha()
+            <p style="color:red;">@ViewBag.ErrorMsg</p>
             <div class="nut">
                 <input type="submit" value="Đăng ký" />
                 <input type="reset" value="Làm mới " />
@@ -133,7 +136,7 @@
                     Bạn đã có tài khoản?
                     <a class="btn btn-primary" style="text-decoration:none;" href="@Url.Action("Index","Login")"><p style="color:cornflowerblue">Đăng nhập ngay</p></a>
                     <br />
-                    <div style="color:red";>
+                    <div style="color:red" ;>
                         @Html.ValidationMessageFor(m => m.TenKH)
                         <br />
                         @Html.ValidationMessageFor(m => m.SDT)
