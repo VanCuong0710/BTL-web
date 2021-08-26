@@ -33,9 +33,9 @@
                 <span style="text-align:center;color:green;">Đăng ký thành công<br /></span>
             }
             <span>Nhập vào số điện thoại:</span>
-            @Html.TextBoxFor(m => m.SDT)
+            @Html.TextBoxFor(m => m.SDT, new { @class = "form-control", placeholder = "Số điện thoại", })
             <span>Nhập vào mật khẩu:</span>
-            @Html.PasswordFor(m => m.MatKhau)
+            @Html.PasswordFor(m => m.MatKhau,new {@class="form-control", placeholder="Mật khẩu"})
             @Html.Captcha("Thử lại", "Nhập vào chữ bạn nhìn thấy", length: 5)
             <p style="color:red;">@ViewBag.ErrorMsg</p>
             <div class="nut">
