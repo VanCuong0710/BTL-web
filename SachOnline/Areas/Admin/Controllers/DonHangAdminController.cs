@@ -15,7 +15,7 @@ namespace SachOnline.Areas.Admin.Controllers
         { 
             DataBase db = new DataBase();
             var dh = db.HoaDons.Select(p => p);
-            int pageSize = 5;
+            int pageSize = 10;
             int pageNumber = (page ?? 1);
             try
             {
@@ -24,7 +24,7 @@ namespace SachOnline.Areas.Admin.Controllers
                 {
                     dh = dh.Where(p => p.MAHD == (mahd));
                 }
-                dh = dh.OrderBy(s => s.MAHD);
+                dh = dh.OrderByDescending(s => s.MAHD);
 
                 return View(dh.ToPagedList(pageNumber, pageSize));
             }
