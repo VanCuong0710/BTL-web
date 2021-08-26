@@ -27,7 +27,7 @@ namespace SachOnline.Controllers
             DataBase mydb = new DataBase();
             if(!this.IsCaptchaValid(errorText:""))
             {
-                @ViewBag.ErrorMsg = "Capcha is not valid";
+                @ViewBag.ErrorMsg = "Capcha không đúng";
                 return View("Index", kh);
             }    
             var check = mydb.KhachHangs.Where(p => p.SDT.Equals(kh.SDT) && p.MatKhau.Equals(kh.MatKhau)).FirstOrDefault();
@@ -52,7 +52,7 @@ namespace SachOnline.Controllers
             DataBase mydb = new DataBase();
             if (!this.IsCaptchaValid(errorText: ""))
             {
-                @ViewBag.ErrorMsg = "Capcha is not valid";
+                @ViewBag.ErrorMsg = "Capcha không đúng";
                 return View();
             }
             if (ModelState.IsValid)

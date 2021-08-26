@@ -118,7 +118,7 @@
             <span>Nhập vào địa chỉ:</span>
             @Html.TextBoxFor(m => m.DiaChi)
 
-            @Html.MathCaptcha()
+            @Html.Captcha("Thử lại","Nhập vào chữ bạn nhìn thấy",length:5)
             <p style="color:red;">@ViewBag.ErrorMsg</p>
             <div class="nut">
                 <input type="submit" value="Đăng ký" />
