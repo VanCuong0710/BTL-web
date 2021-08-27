@@ -59,18 +59,6 @@ namespace SachOnline.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "MaSP,TenSP,Gia,MoTa,HinhAnh,MaDanhMuc,MaNXB")] SanPham sanPham)
         {
-            //if (ModelState.IsValid)
-            //{
-            //    db.SanPhams.Add(sanPham);
-            //    db.SaveChanges();
-            //    return RedirectToAction("Index");
-            //}
-
-            //ViewBag.MaDanhMuc = new SelectList(db.DanhMucSanPhams, "MaDanhMuc", "TenDanhMuc", sanPham.MaDanhMuc);
-            //ViewBag.MaNXB = new SelectList(db.NhaXuatBans, "MaNXB", "TenNhaXuatBan", sanPham.MaNXB);
-            //return View(sanPham);
-
-
 
             try
             {
@@ -127,26 +115,6 @@ namespace SachOnline.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "MaSP,TenSP,Gia,MoTa,HinhAnh,MaDanhMuc,MaNXB")] SanPham sanPham)
         {
-            //if (ModelState.IsValid)
-            //{
-            //    db.Entry(sanPham).State = EntityState.Modified;
-            //    db.SaveChanges();
-            //    return RedirectToAction("Index");
-            //}
-            //ViewBag.MaDanhMuc = new SelectList(db.DanhMucSanPhams, "MaDanhMuc", "TenDanhMuc", sanPham.MaDanhMuc);
-            //ViewBag.MaNXB = new SelectList(db.NhaXuatBans, "MaNXB", "TenNhaXuatBan", sanPham.MaNXB);
-            //return View(sanPham);
-
-            //if (ModelState.IsValid)
-            //{
-            //    db.SanPhams.Add(sanPham);
-            //    db.SaveChanges();
-            //    return RedirectToAction("Index");
-            //}
-
-            //ViewBag.MaDanhMuc = new SelectList(db.DanhMucSanPhams, "MaDanhMuc", "TenDanhMuc", sanPham.MaDanhMuc);
-            //ViewBag.MaNXB = new SelectList(db.NhaXuatBans, "MaNXB", "TenNhaXuatBan", sanPham.MaNXB);
-            //return View(sanPham);
 
             try
             {
@@ -157,20 +125,18 @@ namespace SachOnline.Areas.Admin.Controllers
                     if (f != null && f.ContentLength > 0)
                     {
                         string FileName = System.IO.Path.GetFileName(f.FileName);
-
                         string UploadPath = Server.MapPath("~/Assets/images/" + FileName);
-
                         f.SaveAs(UploadPath);
                         sanPham.HinhAnh = FileName;
+                        
                     }
                     db.Entry(sanPham).State = EntityState.Modified;
                     db.SaveChanges();
 
                 }
                 return RedirectToAction("Index");
-
             }
-            catch (Exception ex)
+            catch (Exception EX)
             {
                 ViewBag.Error = "Lỗi nhập dữ liệu";
                 ViewBag.MaDanhMuc = new SelectList(db.DanhMucSanPhams, "MaDanhMuc", "TenDanhMuc", sanPham.MaDanhMuc);

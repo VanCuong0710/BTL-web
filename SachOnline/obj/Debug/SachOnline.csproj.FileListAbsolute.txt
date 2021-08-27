@@ -609,3 +609,9 @@ C:\Users\84866\Desktop\1\LamLaiBTL\SachOnline\obj\Debug\SachOnline.csproj.CoreCo
 C:\Users\84866\Desktop\1\LamLaiBTL\SachOnline\obj\Debug\SachOnline.csproj.CopyComplete
 C:\Users\84866\Desktop\1\LamLaiBTL\SachOnline\obj\Debug\SachOnline.dll
 C:\Users\84866\Desktop\1\LamLaiBTL\SachOnline\obj\Debug\SachOnline.pdb
+D:\Documents\Lap Trinh ASP.NET\BaiTapLon ASP Nhom3\LamLaiBTL\SachOnline\bin\CaptchaMvc.dll
+D:\Documents\Lap Trinh ASP.NET\BaiTapLon ASP Nhom3\LamLaiBTL\SachOnline\bin\CaptchaMvc.pdb
+D:\Documents\Lap Trinh ASP.NET\BaiTapLon ASP Nhom3\LamLaiBTL\SachOnline\bin\CaptchaMvc.xml
+C:\Users\84866\Desktop\LamLaiBTL\SachOnline\bin\CaptchaMvc.dll
+C:\Users\84866\Desktop\LamLaiBTL\SachOnline\bin\CaptchaMvc.pdb
+C:\Users\84866\Desktop\LamLaiBTL\SachOnline\bin\CaptchaMvc.xml

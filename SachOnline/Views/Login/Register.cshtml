@@ -101,32 +101,32 @@
         @using (Html.BeginForm("Register", "Login", FormMethod.Post, htmlAttributes: new { @enctype = "multipart/form-data", @id = "fromCapcha" }))
         {
             @Html.AntiForgeryToken()
-        <div class="left">
+        <div class="left" style="padding-top: 10px; padding-bottom: 0px;">
             <h1>Đăng ký</h1>
             <span>Nhập vào số điện thoại:</span>
-            @Html.TextBoxFor(m => m.SDT)
+            @Html.TextBoxFor(m => m.SDT, new { @class = "form-control", @placeholder = "0962781328" })
             <span>Nhập vào tên:</span>
-            @Html.TextBoxFor(m => m.TenKH)
+            @Html.TextBoxFor(m => m.TenKH, new { @class = "form-control", @placeholder = "Nguyen Manh Cuong" })
 
             <span>Nhập vào email:</span>
-            @Html.TextBoxFor(m => m.Email)
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "cuongnguyendtk78@gmail.com" })
 
 
             <span>Nhập vào mật khẩu:</span>
-            @Html.PasswordFor(m => m.MatKhau)
-
+            @Html.TextBoxFor(m => m.MatKhau, new { @class = "form-control", @placeholder = "********" })
+           
             <span>Nhập vào địa chỉ:</span>
-            @Html.TextBoxFor(m => m.DiaChi)
+            @Html.TextBoxFor(m => m.DiaChi ,new { @class = "form-control", @placeholder = "Phu Tho" })
 
-            @Html.Captcha("Thử lại","Nhập vào chữ bạn nhìn thấy",length:5)
-            <p style="color:red;">@ViewBag.ErrorMsg</p>
-            <div class="nut">
-                <input type="submit" value="Đăng ký" />
-                <input type="reset" value="Làm mới " />
+            @Html.Captcha("Thử lại", "Nhập vào chữ bạn nhìn thấy", length: 2)
+            <p style="color:red; margin-top:0px">@ViewBag.ErrorMsg</p>
+            <div class="nut" margin-top: 0px;>
+                <input type="submit" value="Đăng ký" style="margin-top:0px; padding:0px;"/>
+                <input type="reset" value="Làm mới "style="margin-top:0px; padding:0px;" />
             </div>
         </div>
 
-            <div class="right">
+            <div class="right" style=" padding-top: 10px; padding-bottom: 20px; ">
                 <span class="loginwith">Đăng nhập với</span>
 
                 <button class="social-signin facebook">Facebook</button>
@@ -135,8 +135,8 @@
                 <div class="DangNhap">
                     Bạn đã có tài khoản?
                     <a class="btn btn-primary" style="text-decoration:none;" href="@Url.Action("Index","Login")"><p style="color:cornflowerblue">Đăng nhập ngay</p></a>
-                    <br />
-                    <div style="color:red" ;>
+                   
+                    <div style="color: red; font-size: 18px;">
                         @Html.ValidationMessageFor(m => m.TenKH)
                         <br />
                         @Html.ValidationMessageFor(m => m.SDT)

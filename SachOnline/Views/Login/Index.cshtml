@@ -35,12 +35,12 @@
             <span>Nhập vào số điện thoại:</span>
             @Html.TextBoxFor(m => m.SDT, new { @class = "form-control", placeholder = "Số điện thoại", })
             <span>Nhập vào mật khẩu:</span>
-            @Html.PasswordFor(m => m.MatKhau,new {@class="form-control", placeholder="Mật khẩu"})
-            @Html.Captcha("Thử lại", "Nhập vào chữ bạn nhìn thấy", length: 5)
+            @Html.TextBoxFor(m => m.MatKhau,new {@class="form-control", placeholder="Mật khẩu"})
+            @Html.Captcha("Thử lại", "Nhập vào chữ bạn nhìn thấy", length: 2)
             <p style="color:red;">@ViewBag.ErrorMsg</p>
-            <div class="nut">
+            <div class="nut"  margin-top: 0px;>
                 <input type="submit" value="Đăng nhập" />
-                <input type="reset" value="Loại bỏ" />
+                <input type="reset" value="Làm mới" />
             </div>
         </div>
 
@@ -58,7 +58,7 @@
                 </div>
                 @if (ViewBag.Error != null)
                 {
-                    <span style="color:red;">@ViewBag.Error</span>
+                    <span style="color:red; font-size:18px">@ViewBag.Error</span>
                 }
             </div>
 

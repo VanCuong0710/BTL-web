@@ -8,7 +8,7 @@ body {
     margin: 0;
     padding: 0;
     background: #DDD;
-    font-size: 16px;
+    font-size: 20px;
     color: #222;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
@@ -17,8 +17,8 @@ body {
 #login-box {
     position: relative;
     margin: 5% auto;
-    width: 600px;
-    height: 600px;
+    width: 700px;
+    height: 700px;
     background: #FFF;
     border-radius: 2px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
@@ -44,7 +44,7 @@ input[type="text"],
 input[type="password"] {
     display: block;
     box-sizing: border-box;
-    margin-bottom: 20px;
+    margin-bottom: 3px;
     padding: 4px;
     width: 220px;
     height: 32px;
@@ -66,7 +66,7 @@ input[type="password"] {
 input[type="submit"] {
     margin-top: 28px;
     width: 120px;
-    height: 37px;
+    height: 45px;
     background: #16a085;
     border: none;
     border-radius: 2px;
@@ -164,7 +164,7 @@ button.social-signin {
 input[type="reset"] {
     margin-top: 28px;
     width: 120px;
-    height: 37px;
+    height: 45px;
     background: #16a085;
     border: none;
     border-radius: 2px;

@@ -172,7 +172,6 @@
     <Compile Include="Models\KhachHang.cs" />
     <Compile Include="Models\NhaXuatBan.cs" />
     <Compile Include="Models\SanPham.cs" />
-    <Compile Include="Models\sysdiagram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -229,9 +228,17 @@
     <Content Include="Assets\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Assets\fonts\font-slider.css" />
     <Content Include="Assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\images\1-compressed.jpg" />
+    <Content Include="Assets\images\10.jpg" />
+    <Content Include="Assets\images\111.jpg" />
+    <Content Include="Assets\images\12.jpg" />
     <Content Include="Assets\images\1826395745_sachhayvekinhdoanh.png" />
+    <Content Include="Assets\images\2.jpg" />
+    <Content Include="Assets\images\24.jpg" />
+    <Content Include="Assets\images\360-compressed.jpg" />
     <Content Include="Assets\images\627808644_tuoitredanggiabaonhieubanner.png" />
     <Content Include="Assets\images\add.png" />
+    <Content Include="Assets\images\atlat-dia-li-compressed.jpg" />
     <Content Include="Assets\images\a_1032997143_thanhadesvithancaiquandianguc.jpeg" />
     <Content Include="Assets\images\a_1116820540_reviewsachphiasaunghicanx1.jpg" />
     <Content Include="Assets\images\a_1119511780_y.jpg" />
@@ -298,6 +305,8 @@
     <Content Include="Assets\images\sub-banner3.png" />
     <Content Include="Assets\images\sub-banner4.jpg" />
     <Content Include="Assets\images\sub-banner5.png" />
+    <Content Include="Assets\images\untitled-1-compressed.jpg" />
+    <Content Include="Assets\images\untitled-1.jpg" />
     <Content Include="Assets\images\visa-curved-32px.png" />
     <Content Include="Assets\images\Z1.png" />
     <Content Include="Assets\js\bootstrap.min.js" />

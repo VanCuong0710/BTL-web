@@ -1,4 +1,4 @@
-namespace SachOnline.Models
+﻿namespace SachOnline.Models
 {
     using System;
     using System.Collections.Generic;
@@ -18,21 +18,24 @@ namespace SachOnline.Models
 
         [Key]
         [StringLength(50)]
+        [Required(ErrorMessage = " Trường này không được để trống")]
         public string MaSP { get; set; }
 
         [StringLength(50)]
+        [Required(ErrorMessage = " Trường này không được để trống")]
         public string TenSP { get; set; }
 
+        [Required(ErrorMessage = "Trường này không được để trống")]
         public int? Gia { get; set; }
 
+        [Required(ErrorMessage = "Trường này không được để trống")]
         [StringLength(50)]
         public string MoTa { get; set; }
-
         [StringLength(50)]
         public string HinhAnh { get; set; }
-
         [Required]
         [StringLength(50)]
+
         public string MaDanhMuc { get; set; }
 
         [Required]

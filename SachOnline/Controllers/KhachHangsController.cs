@@ -84,7 +84,7 @@ namespace SachOnline.Controllers
             {
                 db.Entry(khachHang).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index","SanPhams");
+                return RedirectToAction("Index", "SanPhams");
             }
             return View(khachHang);
         }

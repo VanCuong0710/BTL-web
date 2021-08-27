@@ -16,7 +16,7 @@ body {
 
 #login-box {
     position: relative;
-    margin: 5% auto;
+   margin:5% auto;
     width: 600px;
     height: 600px;
     background: #FFF;
@@ -67,7 +67,7 @@ input[type="password"] {
 input[type="submit"] {
     margin-top: 28px;
     width: 120px;
-    height: 37px;
+    height: 45px;
     background: #16a085;
     border: none;
     border-radius: 2px;
@@ -130,7 +130,7 @@ input[type="submit"] {
 button.social-signin {
     margin-bottom: 20px;
     width: 220px;
-    height: 36px;
+        height: 45px;
     border: none;
     border-radius: 2px;
     color: #FFF;
@@ -166,7 +166,7 @@ button.social-signin {
 input[type="reset"] {
     margin-top: 28px;
     width: 120px;
-    height: 37px;
+    height: 45px;
     background: #16a085;
     border: none;
     border-radius: 2px;
@@ -194,5 +194,5 @@ input[type="reset"] {
 .nut {
     display: flex;
     justify-content: center;
-    margin-top: 85px;
+    margin-top: 0px;
 }

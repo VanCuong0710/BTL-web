@@ -17,7 +17,7 @@
         }
 
         [Key]
-        [Display(Name ="Số điện thoại")]
+        [Display(Name = "Số điện thoại")]
         [StringLength(10)]
         [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$",
                    ErrorMessage = "Số điện thoại: Bạn nhập không đúng định dạng. Phải có 10 số và là chữ số!")]
