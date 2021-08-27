@@ -141,18 +141,18 @@ insert into NhaXuatBan values('NXB02',N'Giáo dục')
 
 go
 
-insert into SanPham values('SP01',N'ABC',1000,N'Chưa có mô tả',N'h1.png',N'DM01',N'NXB01')
-insert into SanPham values('SP02',N'XYZ',1000,N'Chưa có mô tả',N'h2.png',N'DM01',N'NXB01')
-insert into SanPham values('SP03',N'Sách Lịch Sử',2111,N'Chưa có mô tả',N'h3.png',N'DM01',N'NXB01')
-insert into SanPham values('SP04',N'Ngữ Văn',3333,N'Chưa có mô tả',N'h4.png',N'DM01',N'NXB01')
-insert into SanPham values('SP05',N'Lịch Sử',1000,N'Chưa có mô tả',N'h5.png',N'DM01',N'NXB01')
-insert into SanPham values('SP06',N'GGG',1000,N'Chưa có mô tả',N'h6.png',N'DM01',N'NXB01')
-insert into SanPham values('SP07',N'Sách Lịch Sử',4444,N'Chưa có mô tả',N'h7.png',N'DM01',N'NXB01')
-insert into SanPham values('SP08',N'Sách Lịch Sử',5555,N'Chưa có mô tả',N'h8.png',N'DM01',N'NXB01')
-insert into SanPham values('SP09',N'Sách Lịch Sử',1000,N'Chưa có mô tả',N'h9.png',N'DM01',N'NXB01')
-insert into SanPham values('SP010',N'Sách Lịch Sử',6666,N'Chưa có mô tả',N'h10.png',N'DM01',N'NXB01')
-insert into SanPham values('SP011',N'Sách Lịch Sử',7777,N'Chưa có mô tả',N'h11.png',N'DM01',N'NXB01')
-insert into SanPham values('SP012',N'Sách Lịch Sử',8888,N'Chưa có mô tả',N'h12.png',N'DM01',N'NXB01')
+insert into SanPham values('SP01',N'Lịch sửa',1000,N'Kích thước 17x24 trọng lượng 450g',N'h1.png',N'DM01',N'NXB01')
+insert into SanPham values('SP02',N'Mĩ thuật',1500,N'Chưa có mô tả',N'h2.png',N'DM02',N'NXB02')
+insert into SanPham values('SP03',N'Toán',2111,N'17 x 24 cm',N'h3.png',N'DM01',N'NXB01')
+insert into SanPham values('SP04',N'Tài liệu chuyên văn',3333,N'Chưa có mô tả',N'h4.png',N'DM01',N'NXB01')
+insert into SanPham values('SP05',N'Ngữ Văn',1000,N'Chưa có mô tả',N'h5.png',N'DM02',N'NXB01')
+insert into SanPham values('SP06',N'Giải tích',1300,N'17 x 24 cm',N'h6.png',N'DM01',N'NXB01')
+insert into SanPham values('SP07',N'Tuổi trẻ đáng giá bao nhiêu',4444,N'Chưa có mô tả',N'h7.png',N'DM01',N'NXB01')
+insert into SanPham values('SP08',N'Trên Đường Băng',5555,N'17 x 24cm trọng lượng 450g',N'h8.png',N'DM01',N'NXB01')
+insert into SanPham values('SP09',N'Đắc nhân tâm',1000,N'Chưa có mô tả',N'h9.png',N'DM01',N'NXB01')
+insert into SanPham values('SP010',N'You can win',6666,N'Chưa có mô tả',N'h10.png',N'DM01',N'NXB01')
+insert into SanPham values('SP011',N'7 thói quen thành đạt',7777,N'Chưa có mô tả',N'h11.png',N'DM01',N'NXB01')
+insert into SanPham values('SP012',N'Đời ngắn ngủi',8888,N'Chưa có mô tả',N'h12.png',N'DM01',N'NXB01')
 
 GO
 

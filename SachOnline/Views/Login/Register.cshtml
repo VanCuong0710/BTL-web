@@ -134,8 +134,9 @@
                 <button class="social-signin google">Google+</button>
                 <div class="DangNhap">
                     Bạn đã có tài khoản?
-                    <a class="btn btn-primary" style="text-decoration:none;" href="@Url.Action("Index","Login")"><p style="color:cornflowerblue">Đăng nhập ngay</p></a>
-                   
+                    <a class="btn btn-primary" style="text-decoration:none;" href="@Url.Action("Index","Login")"><p style="color:cornflowerblue;text-align:center;">Đăng nhập ngay</p></a>
+                    <a style="text-decoration:none" href="@Url.Action("Home","Sanphams")"><p style="color:cornflowerblue;text-align:center;" >Trang chủ</p></a>
+
                     <div style="color: red; font-size: 18px;">
                         @Html.ValidationMessageFor(m => m.TenKH)
                         <br />

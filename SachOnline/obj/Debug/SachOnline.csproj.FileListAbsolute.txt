@@ -615,3 +615,4 @@ D:\Documents\Lap Trinh ASP.NET\BaiTapLon ASP Nhom3\LamLaiBTL\SachOnline\bin\Capt
 C:\Users\84866\Desktop\LamLaiBTL\SachOnline\bin\CaptchaMvc.dll
 C:\Users\84866\Desktop\LamLaiBTL\SachOnline\bin\CaptchaMvc.pdb
 C:\Users\84866\Desktop\LamLaiBTL\SachOnline\bin\CaptchaMvc.xml
+C:\Users\84866\Desktop\LamLaiBTL\SachOnline\obj\Debug\SachOnline.csproj.AssemblyReference.cache
