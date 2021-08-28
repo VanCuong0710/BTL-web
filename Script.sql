@@ -141,7 +141,7 @@ insert into NhaXuatBan values('NXB02',N'Giáo dục')
 
 go
 
-insert into SanPham values('SP01',N'Lịch sửa',1000,N'Kích thước 17x24 trọng lượng 450g',N'h1.png',N'DM01',N'NXB01')
+insert into SanPham values('SP01',N'Lịch sử',1000,N'Kích thước 17x24 trọng lượng 450g',N'h1.png',N'DM01',N'NXB01')
 insert into SanPham values('SP02',N'Mĩ thuật',1500,N'Chưa có mô tả',N'h2.png',N'DM02',N'NXB02')
 insert into SanPham values('SP03',N'Toán',2111,N'17 x 24 cm',N'h3.png',N'DM01',N'NXB01')
 insert into SanPham values('SP04',N'Tài liệu chuyên văn',3333,N'Chưa có mô tả',N'h4.png',N'DM01',N'NXB01')
