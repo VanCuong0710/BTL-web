@@ -70,12 +70,13 @@
             </div>
         </div>
     </div>
+    if (ViewBag.Error != null)
+    {
+        <br />
+        <div class="alert alert-danger" role="alert">@ViewBag.Error</div>
+    }
 }
-@if (ViewBag.Error != null)
-{
-    <br />
-    <div class="alert alert-danger" role="alert">@ViewBag.Error</div>
-}
+
 <div>
     @Html.ActionLink("Quay lại danh sách", "Index")
 </div>
